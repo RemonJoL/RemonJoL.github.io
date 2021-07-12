@@ -1,0 +1,29 @@
+@use "utility/breakpoints";
+@use "utility/mixins";
+
+@import "utility/breakpoints";
+@import "utility/mixins";
+
+.header-container {
+  display: none;
+
+  @include sm {
+    display: block;
+
+  }
+
+}
+
+.header-initial {
+
+}
+
+.header-nav {
+  border: 1px solid red;
+  font-size: 15px;
+
+}
+
+.header-socialmedia {
+
+}

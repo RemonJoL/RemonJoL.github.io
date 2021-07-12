@@ -1,0 +1,27 @@
+.section {
+
+}
+
+.home {
+
+}
+
+.aboutme {
+  display: none;
+
+}
+
+.coding-examples {
+  display: none;
+
+}
+
+.scs-scheme {
+  display: none;
+
+}
+
+
+#scs-scheme-check:checked ~ .scs-scheme {
+  display: block;
+}

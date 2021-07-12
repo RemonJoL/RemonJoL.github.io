@@ -1,0 +1,34 @@
+.github-logo {
+  height: 32px;
+  width: 32px;
+}
+
+.header-container {
+  display: none;
+}
+@media (min-width: 576px) {
+  .header-container {
+    display: block;
+  }
+}
+
+.header-nav {
+  border: 1px solid red;
+  font-size: 15px;
+}
+
+.aboutme {
+  display: none;
+}
+
+.coding-examples {
+  display: none;
+}
+
+.scs-scheme {
+  display: none;
+}
+
+#scs-scheme-check:checked ~ .scs-scheme {
+  display: block;
+}
