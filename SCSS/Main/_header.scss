@@ -1,5 +1,4 @@
-@use "utility/breakpoints";
-@use "utility/mixins";
+@use "utility/colours";
 
 @import "utility/breakpoints";
 @import "utility/mixins";
@@ -15,6 +14,7 @@
 }
 
 .header-initial {
+  font-size: 48px;
 
 }
 

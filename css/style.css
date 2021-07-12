@@ -12,6 +12,10 @@
   }
 }
 
+.header-initial {
+  font-size: 48px;
+}
+
 .header-nav {
   border: 1px solid red;
   font-size: 15px;

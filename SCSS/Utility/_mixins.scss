@@ -1,3 +1,5 @@
+@use "utility/colours";
+
 // Small devices
 @mixin sm {
    @media (min-width: #{$min576}) {
