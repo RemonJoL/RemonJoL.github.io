@@ -5,25 +5,36 @@
 
 .header-container {
   display: none;
+  width: 205px;
+  border-right: 1px solid red;
+  height: 100%;
+  position: fixed;
+  background-color: white;
 
   @include sm {
     display: block;
+
 
   }
 
 }
 
 .header-initial {
-  font-size: 48px;
+  padding: 0 15px;
+  font-size: 10rem;
+  border-bottom: 1px solid red;
+  text-align: center;
 
 }
 
 .header-nav {
-  border: 1px solid red;
   font-size: 15px;
+  padding: 0 15px;
+  border-bottom: 1px solid red;
 
 }
 
 .header-socialmedia {
+  padding: 0 15px;
 
 }

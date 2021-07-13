@@ -1,14 +1,20 @@
 // Utility
-@use "utility/breakpoints";
-@use "utility/mixins";
-@use "utility/text";
-@use "utility/colours";
+@use "Utility/breakpoints";
+@use "Utility/mixins";
+@use "Utility/text";
+@use "Utility/colours";
 
 // Components
 
-@use "components/images";
+@use "Components/images";
+@use "Components/inputs";
 
 // Main
-@use "main/header";
-@use "main/main";
-@use "main/footer";
+@use "Main/header";
+@use "Main/main";
+@use "Main/projects";
+@use "Main/aboutme";
+@use "Main/codingexamples";
+@use "Main/scsscheme";
+@use "Main/contact";
+@use "Main/footer";

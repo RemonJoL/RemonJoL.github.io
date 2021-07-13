@@ -1,27 +1,74 @@
+@import "utility/breakpoints";
+@import "utility/mixins";
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 .section {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include sm {
+    color: red;
+    padding: 15px 15px 15px 220px;
+
+  }
+
+  @include md {
+    color: blue;
+
+  }
+
+  @include lg {
+    color: purple;
+
+  }
+
+  @include xl {
+    color: orange;
+
+  }
 
 }
 
-.home {
+.container {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#home {
 
 }
 
-.aboutme {
-  display: none;
-
+.main-header {
+  background-image: url(/images/mathieu-cheze-qfsKYUgW6ZY-unsplash.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.coding-examples {
-  display: none;
-
+.scroll {
+  margin: 0 auto;
 }
 
-.scs-scheme {
-  display: none;
-
-}
-
-
-#scs-scheme-check:checked ~ .scs-scheme {
-  display: block;
+.header-title-container {
+  top: 50%;
+  margin: auto;
 }

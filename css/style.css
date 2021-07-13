@@ -1,10 +1,155 @@
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.main-header {
+  color: white;
+  text-align: center;
+}
+
+.contact-info h2 {
+  display: block;
+  width: 100%;
+}
+
+.contact-info p {
+  display: block;
+  width: 100%;
+}
+
+.contact-form p {
+  background-color: white;
+  margin: 0;
+  display: table;
+}
+
+.scs-scheme ul {
+  list-style: none;
+  padding: 0;
+}
+
+.scs-scheme h2 {
+  text-align: center;
+}
+
 .github-logo {
   height: 32px;
   width: 32px;
 }
 
+.project-preview {
+  height: 100%;
+  width: 100%;
+}
+
+.pagecheck {
+  display: none;
+}
+
+#aboutme-check:checked ~ #aboutme {
+  display: block;
+}
+
+#coding-examples-check:checked ~ #coding-examples {
+  display: block;
+}
+
+#coding-examples-check:checked ~ #home {
+  display: none;
+}
+
+#coding-examples-check:checked ~ #coding-examples {
+  display: block;
+}
+
+#scs-scheme-check:checked ~ #scs-scheme {
+  display: block;
+}
+
+#scs-scheme-check:checked ~ #home {
+  display: none;
+}
+
+.contactform-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (min-width: 576px) {
+  .contactform-fieldset {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .contactform-fieldset {
+    color: blue;
+  }
+}
+@media (min-width: 992px) {
+  .contactform-fieldset {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .contactform-fieldset {
+    color: orange;
+  }
+}
+
+.fieldset-legend {
+  color: red;
+}
+
+.contactform-field:before {
+  content: "Test";
+  color: red;
+}
+
+.contactform-field {
+  border: none;
+  line-height: 2rem;
+  width: 99%;
+  margin: 0 -10px 5px -15px;
+}
+
+.contactform-textarea {
+  border: none;
+  line-height: 1rem;
+  width: 99%;
+  margin: 0 -10px 5px -15px;
+}
+@media (min-width: 768px) {
+  .contactform-textarea {
+    color: blue;
+  }
+}
+@media (min-width: 992px) {
+  .contactform-textarea {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .contactform-textarea {
+    color: orange;
+  }
+}
+
 .header-container {
   display: none;
+  width: 205px;
+  border-right: 1px solid red;
+  height: 100%;
+  position: fixed;
+  background-color: white;
 }
 @media (min-width: 576px) {
   .header-container {
@@ -13,26 +158,364 @@
 }
 
 .header-initial {
-  font-size: 48px;
+  padding: 0 15px;
+  font-size: 10rem;
+  border-bottom: 1px solid red;
+  text-align: center;
 }
 
 .header-nav {
-  border: 1px solid red;
   font-size: 15px;
+  padding: 0 15px;
+  border-bottom: 1px solid red;
 }
 
-.aboutme {
-  display: none;
+.header-socialmedia {
+  padding: 0 15px;
 }
 
-.coding-examples {
-  display: none;
+*, :before, :after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.section {
+  padding: 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (min-width: 576px) {
+  .section {
+    color: red;
+    padding: 15px 15px 15px 220px;
+  }
+}
+@media (min-width: 768px) {
+  .section {
+    color: blue;
+  }
+}
+@media (min-width: 992px) {
+  .section {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .section {
+    color: orange;
+  }
+}
+
+.container {
+  margin: 0 -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-header {
+  background-image: url(/images/mathieu-cheze-qfsKYUgW6ZY-unsplash.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.scroll {
+  margin: 0 auto;
+}
+
+.header-title-container {
+  top: 50%;
+  margin: auto;
+}
+
+.project-card-container {
+  padding: 0 15px;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .project-card-container {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .project-card-container {
+    color: blue;
+  }
+}
+@media (min-width: 992px) {
+  .project-card-container {
+    width: 33.3333333%;
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .project-card-container {
+    color: orange;
+  }
+}
+
+.project-card {
+  position: relative;
+  margin: 30px auto;
+}
+
+.about-container {
+  max-width: 350px;
+  border: 2px solid red;
+  padding: 0 15px;
+  border-radius: 15px;
+  margin: auto;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .about-container {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .about-container {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .about-container {
+    width: 35%;
+    color: orange;
+  }
+}
+
+.coding-examples-container {
+  max-width: 350px;
+  border: 2px solid red;
+  padding: 0 15px;
+  border-radius: 15px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .coding-examples-container {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .coding-examples-container {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .coding-examples-container {
+    width: 35%;
+    color: orange;
+  }
 }
 
 .scs-scheme {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-#scs-scheme-check:checked ~ .scs-scheme {
-  display: block;
+.scs-container {
+  max-width: 350px;
+  border: 2px solid red;
+  padding: 0 15px;
+  border-radius: 15px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .scs-container {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .scs-container {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .scs-container {
+    width: 35%;
+    color: orange;
+  }
+}
+
+.treehouse {
+  margin-top: 15px;
+}
+@media (min-width: 768px) {
+  .treehouse {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .treehouse {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .treehouse {
+    width: 35%;
+    color: orange;
+  }
+}
+
+.about-netmatters {
+  margin-top: 15px;
+}
+@media (min-width: 768px) {
+  .about-netmatters {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .about-netmatters {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .about-netmatters {
+    width: 35%;
+    color: orange;
+  }
+}
+
+.main-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .contact-info {
+    width: 50%;
+    color: blue;
+  }
+}
+@media (min-width: 992px) {
+  .contact-info {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-info {
+    color: orange;
+  }
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+@media (min-width: 576px) {
+  .contact-form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (min-width: 768px) {
+  .contact-form {
+    width: 50%;
+    color: blue;
+  }
+}
+@media (min-width: 992px) {
+  .contact-form {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-form {
+    color: orange;
+  }
+}
+
+.field-border {
+  display: inline-block;
+  padding: 0 2px;
+  margin: -0.5rem 0 0 1rem;
+  line-height: 1rem;
+  color: red;
+  width: 100%;
+}
+
+.border-message {
+  width: 104px;
+}
+
+.contact-field-outer {
+  border: 2px solid red;
+  border-radius: 15px;
+  margin: 5px 0px;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .contact-field-outer {
+    margin: 15px 0px;
+    color: red;
+    width: 50%;
+  }
+}
+
+.contact-field-outer-message {
+  border: 2px solid red;
+  border-radius: 15px;
+  margin: 5px 0px;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .field-email {
+    margin: 15px 0px;
+    color: red;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .field-subject {
+    margin: 15px 0px;
+    color: red;
+    width: 100%;
+  }
 }

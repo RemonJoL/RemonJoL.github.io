@@ -1,0 +1,114 @@
+@import "utility/breakpoints";
+@import "utility/mixins";
+
+.main-contact {
+  display: flex;
+}
+
+.contact-info {
+  display: flex;
+  padding: 15px;
+  flex-wrap: wrap;
+
+  @include sm {
+
+  }
+
+  @include md {
+    width: 50%;
+    color: blue;
+
+  }
+
+  @include lg {
+    color: purple;
+
+  }
+
+  @include xl {
+    color: orange;
+
+  }
+}
+
+.contact-form {
+  display: flex;
+  padding: 15px;
+
+  @include sm {
+    flex-wrap: wrap;
+
+  }
+
+  @include md {
+    width: 50%;
+    color: blue;
+
+  }
+
+  @include lg {
+    color: purple;
+
+  }
+
+  @include xl {
+    color: orange;
+
+  }
+}
+
+.field-border {
+  display: inline-block;
+  padding: 0 2px;
+  margin: -0.5rem 0 0 1rem;
+  line-height: 1rem;
+  color: red;
+  width: 100%;
+}
+
+.border-message {
+  width: 104px;
+}
+
+.contact-field-outer {
+  border: 2px solid red;
+  border-radius: 15px;
+  margin: 5px 0px;
+  width: 100%;
+
+  @include sm {
+    margin: 15px 0px;
+    color: red;
+    width: 50%;
+
+  }
+}
+
+.contact-field-outer-message {
+  border: 2px solid red;
+  border-radius: 15px;
+  margin: 5px 0px;
+  width: 100%;
+}
+
+.field-email {
+
+@include sm {
+  margin: 15px 0px;
+  color: red;
+  width: 100%;
+
+}
+
+}
+
+.field-subject {
+
+@include sm {
+  margin: 15px 0px;
+  color: red;
+  width: 100%;
+
+}
+
+}

@@ -1,0 +1,34 @@
+@import "utility/breakpoints";
+@import "utility/mixins";
+
+#coding-examples {
+
+}
+
+.coding-examples-container {
+  max-width: 350px;
+  border: 2px solid red;
+  padding: 0 15px;
+  border-radius: 15px;
+  margin: auto;
+
+  @include sm {
+
+  }
+
+  @include md {
+    width: 50%;
+  }
+
+  @include lg {
+    color: purple;
+
+  }
+
+  @include xl {
+    width: 35%;
+    color: orange;
+
+  }
+
+}

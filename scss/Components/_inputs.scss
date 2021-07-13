@@ -1,0 +1,114 @@
+@import "utility/breakpoints";
+@import "utility/mixins";
+
+.pagecheck {
+  // transform: translateX(211px);
+  display: none;
+}
+
+// Header home
+
+// Header aboutme
+
+#aboutme-check:checked ~ #aboutme {
+  display: block;
+}
+
+// Header portfolio
+
+// Header coding examples
+
+#coding-examples-check:checked ~ #coding-examples {
+  display: block;
+}
+
+#coding-examples-check:checked ~ #home {
+  display: none;
+}
+
+#coding-examples-check:checked ~ #coding-examples {
+  display: block;
+}
+
+// Header SCS scsscheme
+
+#scs-scheme-check:checked ~ #scs-scheme {
+  display: block;
+}
+
+#scs-scheme-check:checked ~ #home {
+  display: none;
+}
+
+// Header Contact
+
+.contactform-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include sm {
+    width: 100%;
+
+  }
+
+  @include md {
+    color: blue;
+
+  }
+
+  @include lg {
+    color: purple;
+
+  }
+
+  @include xl {
+    color: orange;
+
+  }
+
+}
+
+.fieldset-legend {
+  color: red;
+}
+
+.contactform-field:before {
+  content: "Test";
+  color: red;
+}
+
+.contactform-field {
+  border: none;
+  line-height: 2rem;
+  width: 99%;
+  margin: 0 -10px 5px -15px;
+}
+
+.contactform-textarea {
+  border: none;
+  line-height: 1rem;
+  width: 99%;
+  margin: 0 -10px 5px -15px;
+
+  @include sm {
+
+  }
+
+  @include md {
+    color: blue;
+
+  }
+
+  @include lg {
+    color: purple;
+
+  }
+
+  @include xl {
+    color: orange;
+
+  }
+}

@@ -9,149 +9,195 @@
     <meta name="description" content="Remon Jansen of Lorkeers' Web/Software Dev Portfolio">
     <meta name="author" content="Remon Jansen of Lorkeers">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 
   </head>
 
   <body>
 
-    <header>
-      <div class="header-container">
+    <div class="page-container">
 
-        <div class="header-initial">
-          <a href="#"> R</a>
+      <header>
+        <div class="header-container">
+
+          <div class="header-initial">
+            <a href="index.html">R</a>
+          </div>
+
+          <div class="header-nav">
+
+            <h2><a href="aboutme.html">About Me</a></h2>
+            <h2><a href="#portfolio">My Portfolio</a></h2>
+            <h2><a href="codingexamples.html">Coding Examples</a></h2>
+            <h2><a href="scs-scheme.html">SCS Scheme</a></h2>
+            <h2><a href="#contact">Contact Me</a></h2>
+
+          </div>
+
+          <div class="header-socialmedia">
+
+            <a href="https://github.com/RemonJoL"><img class="github-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"></a>
+
+          </div>
+
         </div>
 
-        <div class="header-nav">
+      </header>
 
-          <h2>About Me</h2>
-          <h2>My Portfolio</h2>
-          <h2><label for="coding-examples-check">Coding Examples</label></h2>
-          <h2><label for="scs-scheme-check">SCS Scheme</label></h2>
-          <h2>Contact Me</h2>
+      <main>
 
-        </div>
+        <input class="pagecheck" type="checkbox" id="portfolio-check">
+        <input class="pagecheck" type="checkbox" id="aboutme-check">
+        <input class="pagecheck" type="checkbox" id="coding-examples-check">
+        <input class="pagecheck" type="checkbox" id="scs-scheme-check">
 
-        <div class="header-socialmedia">
+        <div class="section main-header">
 
-          <a href="https://github.com/RemonJoL"><img class="github-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"></a>
-
-        </div>
-
-      </div>
-
-    </header>
-
-    <main>
-
-      <input type="checkbox" id="portfolio-check">
-      <input type="checkbox" id="aboutme-check">
-      <input type="checkbox" id="coding-examples-check">
-      <input type="checkbox" id="scs-scheme-check">
-      <input type="checkbox" id="portfolio-check">
-
-      <!-- Home -->
-      <div class="section home">
-
-        <div class="main-header">
-
+          <div class="header-title header-title-container">
           <h1>My Name is Remon Jansen of Lorkeers</h1>
           <h2>I'm a Web/Software Developer</h2>
+          </div>
+
+          <div class="scroll container">
+            <h2><a href="#portfolio">Scroll</a></h2>
+          </div>
 
         </div>
 
-        <div class="main-portfolio">
+        <!-- Home -->
+        <div id="home">
 
-          <div class="project-card">
+          <div id="portfolio">
+
+            <div class="section main-portfolio">
+
+              <div class="container">
+
+                <div class="project-card-container">
+                  <div class="project-card">
+                    <img class="project-preview" src="images/NM project preview.jpg" alt="">
+                    <div class="project-card-content">
+                    <h3>Project One</h3>
+                    <p>Netmatters Website Facsimile</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-card-container">
+                  <div class="project-card">
+                    <img class="project-preview" src="images/axure project preview.jpg" alt="">
+                    <h3>Project One</h3>
+                    <p>Netmatters Website Facsimile</p>
+                  </div>
+                </div>
+
+                <div class="project-card-container">
+                  <div class="project-card">
+                    <img class="project-preview" src="images/NM project preview.jpg" alt="">
+                    <h3>Project One</h3>
+                    <p>Netmatters Website Facsimile</p>
+                  </div>
+                </div>
+
+                <div class="project-card-container">
+                  <div class="project-card">
+                    <img class="project-preview" src="images/NM project preview.jpg" alt="">
+                    <h3>Project One</h3>
+                    <p>Netmatters Website Facsimile</p>
+                  </div>
+                </div>
+
+                <div class="project-card-container">
+                  <div class="project-card">
+                    <img class="project-preview" src="images/NM project preview.jpg" alt="">
+                    <h3>Project One</h3>
+                    <p>Netmatters Website Facsimile</p>
+                  </div>
+                </div>
+
+                <div class="project-card-container">
+                  <div class="project-card">
+                    <img class="project-preview" src="images/NM project preview.jpg" alt="">
+                    <h3>Project One</h3>
+                    <p>Netmatters Website Facsimile</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+            <div id="contact">
+
+              <div class="section main-contact">
+
+                <div class="container">
+
+                  <div class="contact-info">
+
+                    <h2>Get in Touch</h2>
+                    <p>You can contact me in the following ways:</p>
+                    <p>E-mail: <a href="mailto:remonjol@gmail.com">Remonjol@gmail.com</a> </p>
+                    <p>Phone: <a href="tel:+447305482690">07305482690</a></p>
+                    <p>You can also use the following contact form, I will get back to you in 2-3 days, however it may take longer if your message was sent on a weekend or bank holiday. </p>
+
+                  </div>
+
+                  <div class="contact-form">
+
+                    <fieldset class="contactform-fieldset">
+
+                      <div class="contact-field-outer">
+                        <div class="field-border border-name">
+                          <p>Name*</p>
+                          <input class="contactform-field" type="text" name="" value="" placeholder="Name">
+                        </div>
+                      </div>
+
+                      <div class="contact-field-outer">
+                        <div class="field-border border-lastname">
+                          <p>Last Name*</p>
+                          <input class="contactform-field" type="text" name="" value="" placeholder="Last Name">
+                        </div>
+                      </div>
+
+                      <div class="contact-field-outer field-email">
+                        <div class="field-border border-email">
+                          <p>E-mail*</p>
+                          <input class="contactform-field" type="text" name="" value="" placeholder="E-mail">
+                        </div>
+                      </div>
+
+                      <div class="contact-field-outer field-subject">
+                        <div class="field-border border-subject">
+                          <p>Subject*</p>
+                          <input class="contactform-field" type="text" name="" value="Subject">
+                        </div>
+                      </div>
+
+                      <div class="contact-field-outer-message">
+                        <div class="field-border border-message">
+                          <p>Your Message*</p>
+                          <textarea class="contactform-textarea" type="textarea" name="" value="Your message" rows="10"></textarea>
+                        </div>
+                      </div>
+
+                  </fieldset>
+
+                </div>
+
+              </div>
+
+            </div>
 
           </div>
 
         </div>
 
-        <div class="main-contact">
-
-          <div class="contact-form">
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- About Me -->
-
-      <div class="section aboutme">
-
-        <div class="main-header">
-
-        </div>
-
-        <div class="about-container">
-
-        </div>
-
-      </div>
-
-      <!-- Coding Examples -->
-
-      <div class="section coding-examples">
-
-        <div class="main-header">
-
-        </div>
-
-        <div class="coding-examples-container">
-          <h2>Coming Soon</h2>
-
-        </div>
-
-      </div>
-
-      <!-- SCS Scheme -->
-
-      <div class="section scs-scheme">
-
-        <div class="main-header">
-
-        </div>
-
-        <div class="scs-intro">
-          <h2>Introduction to Scion Coalition Scheme</h2>
-          <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers. <br>
-          Under the supervision of senior web developers, scions generally aim to complete training within six to nine months. <br>
-          The course is intensive and therefore the level of learning achieved is extensive in a short space of time.</p>
-        </div>
-
-        <div class="treehouse">
-          <h2>Treehouse</h2>
-          <p>Treehouse is an online learning community, featuring videos covering a number of topics from basic HTML to C# programming, iOS development, data analysis, and more.<br>
-          By completing courses users can earn points, allowing them to track their progress and see how much they?ve covered in certain areas.</p>
-          <h3>Total Score</h3>
-          <p><a href="https://teamtreehouse.com/remonjansenoflorkeers2">My TeamTreehouse Progress</a></p>
-        </div>
-
-        <div class="about-netmatters">
-          <h2>About Netmatters</h2>
-          <ul class="netmatters-list">
-            <li>Established in 2008</li>
-            <li>Norfolk's leading technology company</li>
-            <li>Winner of the Princess Royal Training Award</li>
-            <li>Winner of EDP Skills of Tomorrow Award</li>
-            <li>80+ staff, 2 locations across Norfolk</li>
-            <li>Digital Marketing, Website & Software development & IT Support</li>
-            <li>Broad spectrum of clients, working nationwide</li>
-            <li>Operate to strict company values</li>
-          </ul>
-
-        </div>
-
-      </div>
-
-    </main>
-
-    <footer>
-
-    </footer>
+    </div>
 
   </body>
+
 </html>

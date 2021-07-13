@@ -1,0 +1,45 @@
+@import "utility/breakpoints";
+@import "utility/mixins";
+
+.main-portfolio {
+
+  @include sm {
+  }
+
+}
+
+.project-card-container {
+  padding: 0 15px;
+  width: 100%;
+
+  @include sm {
+  width:50%;
+
+
+  }
+
+  @include md {
+    color: blue;
+
+  }
+
+  @include lg {
+    width:33.3333333%;
+    color: purple;
+
+  }
+
+  @include xl {
+    color: orange;
+
+  }
+
+}
+
+.project-card {
+  position: relative;
+  margin: 30px auto;
+}
+
+.project-card-content {
+}
