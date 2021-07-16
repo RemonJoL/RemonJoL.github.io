@@ -3,7 +3,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
     <title>Remon Jansen of Lorkeers</title>
     <meta name="description" content="Remon Jansen of Lorkeers' Web/Software Dev Portfolio">
@@ -26,17 +29,22 @@
 
           <div class="header-nav">
 
-            <h2><a href="aboutme.html">About Me</a></h2>
-            <h2><a href="#portfolio">My Portfolio</a></h2>
-            <h2><a href="codingexamples.html">Coding Examples</a></h2>
-            <h2><a href="scs-scheme.html">SCS Scheme</a></h2>
-            <h2><a href="#contact">Contact Me</a></h2>
+            <h2><a href="aboutme.html#aboutme">About Me</a></h2>
+            <h2><a href="index.html#portfolio">My Portfolio</a></h2>
+            <h2><a href="codingexamples.html#coding-examples">Coding Examples</a></h2>
+            <h2><a href="scs-scheme.html#scs-scheme">SCS Scheme</a></h2>
 
+          </div>
+
+          <div class="header-contact">
+            <h2><a href="index.html#contact">Contact Me</a></h2>
           </div>
 
           <div class="header-socialmedia">
 
-            <a href="https://github.com/RemonJoL"><img class="github-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"></a>
+            <div class="socialmedia-item github-icon">
+              <a href="https://github.com/RemonJoL"><img src="images/GitHub-Mark-32px.png" alt="GitHub"></a>
+            </div>
 
           </div>
 
@@ -54,12 +62,17 @@
         <div class="section main-header">
 
           <div class="header-title header-title-container">
-          <h1>My Name is Remon Jansen of Lorkeers</h1>
+          <h1>My name is Remon Jansen of Lorkeers</h1>
           <h2>I'm a Web/Software Developer</h2>
           </div>
 
-          <div class="scroll container">
-            <h2><a href="#portfolio">Scroll</a></h2>
+          <a href="#portfolio">
+            <div class="scroll-container">
+              <h2>Scroll</h2>
+            <div class="arrow">
+          </a>
+
+            </div>
           </div>
 
         </div>
@@ -69,58 +82,80 @@
 
           <div id="portfolio">
 
-            <div class="section main-portfolio">
+            <div class="main-portfolio">
 
               <div class="container">
 
                 <div class="project-card-container">
-                  <div class="project-card">
-                    <img class="project-preview" src="images/NM project preview.jpg" alt="">
-                    <div class="project-card-content">
-                    <h3>Project One</h3>
-                    <p>Netmatters Website Facsimile</p>
+                  <a href="#">
+                    <div class="project-card">
+                      <div class="project-card-content">
+                        <h3>Project One</h3>
+                        <p>Netmatters Website Facsimile</p>
+                      </div>
+                      <img class="project-preview" src="images/NM project preview.jpg" alt="">
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 <div class="project-card-container">
-                  <div class="project-card">
-                    <img class="project-preview" src="images/axure project preview.jpg" alt="">
-                    <h3>Project One</h3>
-                    <p>Netmatters Website Facsimile</p>
-                  </div>
+                  <a href="#">
+                    <div class="project-card">
+                      <div class="project-card-content">
+                        <h3>Project Two</h3>
+                        <p>Axure Webshop</p>
+                      </div>
+                      <img class="project-preview" src="images/axure project preview.jpg" alt="">
+                    </div>
+                  </a>
                 </div>
 
                 <div class="project-card-container">
-                  <div class="project-card">
-                    <img class="project-preview" src="images/NM project preview.jpg" alt="">
-                    <h3>Project One</h3>
-                    <p>Netmatters Website Facsimile</p>
-                  </div>
+                  <a href="#">
+                    <div class="project-card">
+                      <div class="project-card-content">
+                        <h3>Project Three</h3>
+                        <p>Project Description</p>
+                      </div>
+                      <img class="project-preview" src="images/NM project preview.jpg" alt="">
+                    </div>
+                  </a>
                 </div>
 
                 <div class="project-card-container">
-                  <div class="project-card">
-                    <img class="project-preview" src="images/NM project preview.jpg" alt="">
-                    <h3>Project One</h3>
-                    <p>Netmatters Website Facsimile</p>
-                  </div>
+                  <a href="#">
+                    <div class="project-card">
+                      <div class="project-card-content">
+                        <h3>Project Four</h3>
+                        <p>Project Description</p>
+                      </div>
+                      <img class="project-preview" src="images/NM project preview.jpg" alt="">
+                    </div>
+                  </a>
                 </div>
 
                 <div class="project-card-container">
-                  <div class="project-card">
-                    <img class="project-preview" src="images/NM project preview.jpg" alt="">
-                    <h3>Project One</h3>
-                    <p>Netmatters Website Facsimile</p>
-                  </div>
+                  <a href="#">
+                    <div class="project-card">
+                      <div class="project-card-content">
+                        <h3>Project Five</h3>
+                        <p>Project Description</p>
+                      </div>
+                      <img class="project-preview" src="images/NM project preview.jpg" alt="">
+                    </div>
+                  </a>
                 </div>
 
                 <div class="project-card-container">
-                  <div class="project-card">
-                    <img class="project-preview" src="images/NM project preview.jpg" alt="">
-                    <h3>Project One</h3>
-                    <p>Netmatters Website Facsimile</p>
-                  </div>
+                  <a href="#">
+                    <div class="project-card">
+                      <div class="project-card-content">
+                        <h3>Project Six</h3>
+                        <p>Project Description</p>
+                      </div>
+                      <img class="project-preview" src="images/NM project preview.jpg" alt="">
+                    </div>
+                  </a>
                 </div>
 
               </div>
@@ -131,57 +166,87 @@
 
             <div id="contact">
 
-              <div class="section main-contact">
+              <div class="main-contact">
 
-                <div class="container">
+                <div class="container-contact">
 
                   <div class="contact-info">
 
-                    <h2>Get in Touch</h2>
-                    <p>You can contact me in the following ways:</p>
-                    <p>E-mail: <a href="mailto:remonjol@gmail.com">Remonjol@gmail.com</a> </p>
-                    <p>Phone: <a href="tel:+447305482690">07305482690</a></p>
-                    <p>You can also use the following contact form, I will get back to you in 2-3 days, however it may take longer if your message was sent on a weekend or bank holiday. </p>
+                    <div class="contact-info-inner">
+
+                      <div class="contact-info-header">
+                        <h2>Get in Touch</h2>
+                      </div>
+
+                      <div class="contact-info-content">
+                        <p>You can contact me in the following ways:</p>
+                        <p>E-mail: <a href="mailto:remonjol@gmail.com">Remonjol@gmail.com</a> </p>
+                        <p>Phone: <a href="tel:+447305482690">07305482690</a></p>
+                        <p>You can also use the following contact form, I will get back to you in 2-3 days, however it may take longer if your message was sent on a weekend or bank holiday. </p>
+                      </div>
+
+                    </div>
 
                   </div>
+
+                </div>
+
+                  <div class="container-contact">
 
                   <div class="contact-form">
 
                     <fieldset class="contactform-fieldset">
 
-                      <div class="contact-field-outer">
-                        <div class="field-border border-name">
-                          <p>Name*</p>
-                          <input class="contactform-field" type="text" name="" value="" placeholder="Name">
+                      <div class="contact-field-container">
+                        <div class="contact-field-outer">
+                          <div class="field-border border-name">
+                            <p>Name*</p>
+                            <input class="contactform-field" type="text" name="" value="" placeholder="Name">
+                          </div>
                         </div>
                       </div>
 
-                      <div class="contact-field-outer">
-                        <div class="field-border border-lastname">
-                          <p>Last Name*</p>
-                          <input class="contactform-field" type="text" name="" value="" placeholder="Last Name">
+                      <div class="contact-field-container">
+                        <div class="contact-field-outer">
+                          <div class="field-border border-lastname">
+                            <p>Last Name*</p>
+                            <input class="contactform-field" type="text" name="" value="" placeholder="Last Name">
+                          </div>
                         </div>
                       </div>
 
-                      <div class="contact-field-outer field-email">
-                        <div class="field-border border-email">
-                          <p>E-mail*</p>
-                          <input class="contactform-field" type="text" name="" value="" placeholder="E-mail">
+                      <div class="contact-field-container">
+                        <div class="contact-field-outer field-email">
+                          <div class="field-border border-email">
+                            <p>E-mail*</p>
+                            <input class="contactform-field" type="text" name="" value="" placeholder="E-mail">
+                          </div>
                         </div>
                       </div>
 
-                      <div class="contact-field-outer field-subject">
-                        <div class="field-border border-subject">
-                          <p>Subject*</p>
-                          <input class="contactform-field" type="text" name="" value="Subject">
+                      <div class="contact-field-container">
+                        <div class="contact-field-outer field-subject">
+                          <div class="field-border border-subject">
+                            <p>Subject*</p>
+                            <input class="contactform-field" type="text" name="" value="" placeholder="Subject">
+                          </div>
                         </div>
                       </div>
 
-                      <div class="contact-field-outer-message">
-                        <div class="field-border border-message">
-                          <p>Your Message*</p>
-                          <textarea class="contactform-textarea" type="textarea" name="" value="Your message" rows="10"></textarea>
+                      <div class="contact-field-container">
+                        <div class="contact-field-outer-message">
+                          <div class="field-border border-message">
+                            <p>Your Message*</p>
+                            <textarea class="contactform-textarea" type="textarea" name="" value="" rows="10" placeholder="Your message"></textarea>
+                          </div>
                         </div>
+                      </div>
+
+                      <div class="submit-button-container">
+                        <div class="submit-button">
+                          <span>Submit</span>
+                        </div>
+
                       </div>
 
                   </fieldset>

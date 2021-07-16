@@ -54,35 +54,35 @@
 
   }
 
-  @include md {
-    color: blue;
-
-  }
-
-  @include lg {
-    color: purple;
-
-  }
-
-  @include xl {
-    color: orange;
-
-  }
-
 }
 
 .fieldset-legend {
   color: red;
 }
 
-.contactform-field:before {
-  content: "Test";
-  color: red;
+.main-contact input {
+  font-family: inherit;
+  font-size: 1.25rem;
+}
+
+.main-contact input:focus {
+  outline: none;
+  border:none;
+}
+
+.main-contact textarea {
+  font-size: 1.25rem;
+    font-family: inherit;
+}
+
+.main-contact textarea:focus {
+  outline: none;
+  border:none;
 }
 
 .contactform-field {
   border: none;
-  line-height: 2rem;
+  padding: 0.5rem;
   width: 99%;
   margin: 0 -10px 5px -15px;
 }
@@ -92,23 +92,5 @@
   line-height: 1rem;
   width: 99%;
   margin: 0 -10px 5px -15px;
-
-  @include sm {
-
-  }
-
-  @include md {
-    color: blue;
-
-  }
-
-  @include lg {
-    color: purple;
-
-  }
-
-  @include xl {
-    color: orange;
-
-  }
+  padding: 0.5rem;
 }

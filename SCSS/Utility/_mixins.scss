@@ -27,3 +27,16 @@
        @content;
    }
 }
+
+// Extra Extra large devices
+@mixin xxl {
+   @media (min-width: #{$min1440}) {
+       @content;
+   }
+}
+
+@mixin redborder {
+  border: 2px solid red;
+  border-radius: 15px;
+  box-shadow: 7px 7px 5px #555;
+}

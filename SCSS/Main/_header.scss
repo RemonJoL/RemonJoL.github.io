@@ -6,15 +6,14 @@
 .header-container {
   display: none;
   width: 205px;
-  border-right: 1px solid red;
+  border-right: 2px solid red;
   height: 100%;
   position: fixed;
   background-color: white;
+  box-shadow: 5px 0px 5px #555;
 
   @include sm {
     display: block;
-
-
   }
 
 }
@@ -22,7 +21,7 @@
 .header-initial {
   padding: 0 15px;
   font-size: 10rem;
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid red;
   text-align: center;
 
 }
@@ -30,11 +29,22 @@
 .header-nav {
   font-size: 15px;
   padding: 0 15px;
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid red;
 
 }
 
+.header-contact {
+  font-size: 15px;
+  padding: 0 15px;
+  border-bottom: 2px solid red;
+}
+
 .header-socialmedia {
+  display: flex;
   padding: 0 15px;
 
+}
+
+.socialmedia-item {
+  margin: 1rem auto;
 }

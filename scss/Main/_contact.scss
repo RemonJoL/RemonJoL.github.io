@@ -2,59 +2,61 @@
 @import "utility/mixins";
 
 .main-contact {
-  display: flex;
-}
-
-.contact-info {
-  display: flex;
   padding: 15px;
+  display: flex;
   flex-wrap: wrap;
 
   @include sm {
-
+    padding: 15px 15px 15px 220px;
   }
 
-  @include md {
-    width: 50%;
-    color: blue;
+}
 
-  }
+.container-contact {
+  margin-bottom: 15px;
 
   @include lg {
-    color: purple;
+    width: 50%;
+  }
+}
+
+.contact-info-inner {
+  @include redborder;
+  padding: 15px;
+}
+
+.contact-info {
+  margin: 15px 0 auto;
+
+  @include md {
+    padding: 0 15px;
 
   }
+}
 
-  @include xl {
-    color: orange;
+.contact-info-header {
 
-  }
+    margin-top: -1.5rem;
+}
+
+.contact-info-content {
+  margin: 0 auto -0.85rem;
 }
 
 .contact-form {
   display: flex;
-  padding: 15px;
-
   @include sm {
     flex-wrap: wrap;
-
   }
 
   @include md {
-    width: 50%;
-    color: blue;
-
+    padding: 15px;
   }
+}
 
-  @include lg {
-    color: purple;
-
-  }
-
-  @include xl {
-    color: orange;
-
-  }
+.contactform-fieldset {
+  @include redborder;
+  padding: 15px;
 }
 
 .field-border {
@@ -66,22 +68,32 @@
   width: 100%;
 }
 
-.border-message {
-  width: 104px;
-}
-
 .contact-field-outer {
   border: 2px solid red;
   border-radius: 15px;
   margin: 5px 0px;
+}
+
+.contact-field-container {
   width: 100%;
+}
+
+.contact-field-container:nth-of-type(1) {
 
   @include sm {
-    margin: 15px 0px;
-    color: red;
+    padding-right: 5px;
     width: 50%;
-
   }
+
+}
+
+.contact-field-container:nth-of-type(2) {
+
+  @include sm {
+    padding-left: 5px;
+    width: 50%;
+  }
+
 }
 
 .contact-field-outer-message {
@@ -92,23 +104,23 @@
 }
 
 .field-email {
+  @include sm {
+    color: red;
+    width: 100%;
 
-@include sm {
-  margin: 15px 0px;
-  color: red;
-  width: 100%;
-
-}
-
+  }
 }
 
 .field-subject {
-
-@include sm {
-  margin: 15px 0px;
-  color: red;
-  width: 100%;
-
+  @include sm {
+    color: red;
+    width: 100%;
+  }
 }
 
+.submit-button-container {
+  border: 2px solid red;
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
 }

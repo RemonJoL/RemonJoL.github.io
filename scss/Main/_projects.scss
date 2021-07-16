@@ -2,8 +2,13 @@
 @import "utility/mixins";
 
 .main-portfolio {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
   @include sm {
+    padding: 15px 15px 15px 220px;
   }
 
 }
@@ -11,35 +16,59 @@
 .project-card-container {
   padding: 0 15px;
   width: 100%;
+  overflow: hidden;
 
   @include sm {
-  width:50%;
 
 
   }
 
   @include md {
-    color: blue;
+    width:50%;
 
   }
 
   @include lg {
     width:33.3333333%;
-    color: purple;
-
-  }
-
-  @include xl {
-    color: orange;
 
   }
 
 }
 
 .project-card {
+  @include redborder;
+  display: flex;
   position: relative;
   margin: 30px auto;
+  overflow: hidden;
+}
+
+.project-card:hover > .project-card-content{
+  visibility: visible;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.75);
+  width: 120%;
+  transform: translateX(-10px);
+  border-radius: 15px;
+
 }
 
 .project-card-content {
+  display: inline;
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  padding: 15px 25px;
+  transform: translateX(-450px);
+  transition: transform 0.5s ease;
+}
+
+.project-preview {
+  height: 100%;
+  width: 100%;
+  transition: 0.8s ease;
+}
+
+.project-card:hover > .project-preview {
+  transform: scale(1.5);
 }

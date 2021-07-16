@@ -1,9 +1,11 @@
-.github-logo {
+.github-icon {
   height: 32px;
   width: 32px;
+  border-radius: 50%;
+  background: none;
+  transition: background-color 0.5s ease;
 }
 
-.project-preview {
-  height: 100%;
-  width: 100%;
+.github-icon:hover {
+  background: red;
 }

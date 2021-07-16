@@ -2,80 +2,112 @@
 @import "utility/mixins";
 
 .scs-scheme {
-  display: flex;
-  flex-wrap: wrap;
+  flex-flow: column;
+
+  @include xl {
+    flex-flow: row;
+  }
+
+  @include xxl {
+  }
+
 }
 
-.scs-container {
-  max-width: 350px;
-  border: 2px solid red;
-  padding: 0 15px;
-  border-radius: 15px;
-  margin: auto;
+.scs-container-outer {
+  max-width: 500px;
+  margin: 30px auto 0;
 
   @include sm {
+    padding: 0 15px;
 
   }
 
   @include md {
-    width: 50%;
   }
 
   @include lg {
-    color: purple;
-
   }
 
   @include xl {
-    width: 35%;
-    color: orange;
-
+    width: 320px;
   }
 
+  @include xxl {
+    width: 375px;
+  }
+}
+
+.scs-container-outer:nth-of-type(1) {
+  @include xl {
+    margin: 0 0 0 auto;
+  }
+    @include xxl {
+      margin: 0 15px 0 auto;
+    }
+}
+
+.scs-container-outer:nth-of-type(2) {
+  @include xl {
+    margin: 0;
+  }
+  @include xxl {
+    margin: 0 15px;
+  }
+}
+
+.scs-container-outer:nth-of-type(3) {
+  margin-bottom: 30px;
+
+  @include xl {
+    margin: 0 auto 0 0;
+  }
+    @include xxl {
+      margin: 0 auto 0 15px;
+    }
+}
+
+.scs-container {
+  @include redborder;
+  padding: 15px 15px 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.scs-container-header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.scs-container-content {
+
+  @include xl {
+    height: 375px;
+  }
+
+  @include xxl {
+    height: 310px;
+  }
+}
+
+.scs-intro {
 }
 
 .treehouse {
   margin-top: 15px;
 
-@include sm {
+  @include xl {
+    margin-top: 0;
 
-}
-
-@include md {
-  width: 50%;
-}
-
-@include lg {
-  color: purple;
-
-}
-
-@include xl {
-  width: 35%;
-  color: orange;
-
-}
+  }
 }
 
 .about-netmatters {
   margin-top: 15px;
 
-@include sm {
-
-}
-
-@include md {
-  width: 50%;
-}
-
-@include lg {
-  color: purple;
-
-}
-
 @include xl {
-  width: 35%;
-  color: orange;
-
+  margin-top: 0;
 }
 }

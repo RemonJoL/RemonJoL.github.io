@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  width: 100%;
+}
+
 body {
   margin: 0;
 }
@@ -12,35 +20,18 @@ body {
 .page-container {
   display: flex;
   flex-direction: row;
-  width: 100vw;
   height: 100vh;
-  overflow-y: scroll;
 }
 
 .section {
   padding: 15px;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  min-height: 100vh;
 
   @include sm {
-    color: red;
     padding: 15px 15px 15px 220px;
-
-  }
-
-  @include md {
-    color: blue;
-
-  }
-
-  @include lg {
-    color: purple;
-
-  }
-
-  @include xl {
-    color: orange;
 
   }
 
@@ -50,6 +41,7 @@ body {
   margin: 0 -15px;
   display: flex;
   flex-wrap: wrap;
+  padding: 15px;
 }
 
 #home {
@@ -57,9 +49,8 @@ body {
 }
 
 .main-header {
-  background-image: url(/images/mathieu-cheze-qfsKYUgW6ZY-unsplash.jpg);
+  background-image: url(/images/denys-nevozhai-w7YCquMkv2c-unsplash.jpg);
   background-size: cover;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -71,4 +62,50 @@ body {
 .header-title-container {
   top: 50%;
   margin: auto;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.scroll-container {
+background: rgba(255, 255, 255, 0.55);
+padding: 0 15px;
+border-radius: 15px;
+height: 200px;
+}
+
+.scroll-container:hover > .arrow {
+  height: 75px;
+  background-color: black;
+}
+
+.scroll-container:hover > .arrow:after {
+border-left: 25px solid transparent;
+border-right: 25px solid transparent;
+  border-top: 50px solid black;
+}
+
+.arrow {
+  margin: -15px auto 0;
+  position: relative;
+  width: 20px;
+  height: 50px;
+  background-color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  top: 0;
+  transition: height 0.3s ease-in;
+}
+
+.arrow:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -70%;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid black;
+  transition: border 0.3s ease;
 }
