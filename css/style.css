@@ -26,7 +26,7 @@ a:visited {
 }
 @media (min-width: 576px) {
   .scroll-container h2 {
-    font-size: revert;
+    font-size: 1.25rem;
   }
 }
 
@@ -42,7 +42,7 @@ a:visited {
 }
 @media (min-width: 576px) {
   .header-title-container h1 {
-    font-size: revert;
+    font-size: 2rem;
   }
 }
 
@@ -51,7 +51,7 @@ a:visited {
 }
 @media (min-width: 576px) {
   .header-title-container h2 {
-    font-size: revert;
+    font-size: 1.5rem;
   }
 }
 
