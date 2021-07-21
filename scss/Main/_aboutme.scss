@@ -12,18 +12,16 @@
 
 .about-container {
   @include redborder;
-  max-width: 350px;
   padding: 0 15px;
   margin: auto;
   text-align: center;
   background: white;
 
+  @include s {
+    width: 325px;
+  }
+
   @include md {
-    width: 50%;
+    width: 500px;
   }
-
-  @include xl {
-    width: 35%;
-  }
-
 }

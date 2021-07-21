@@ -778,20 +778,19 @@ body {
   -webkit-box-shadow: 7px 7px 5px #400000;
           box-shadow: 7px 7px 5px #400000;
   background: white;
-  max-width: 350px;
   padding: 0 15px;
   margin: auto;
   text-align: center;
   background: white;
 }
-@media (min-width: 768px) {
+@media (min-width: 425px) {
   .about-container {
-    width: 50%;
+    width: 325px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .about-container {
-    width: 35%;
+    width: 500px;
   }
 }
 
