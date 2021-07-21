@@ -1,0 +1,78 @@
+@use "utility/colours";
+
+.header-initial {
+  transition: color 200ms ease-in-out;
+}
+
+.header-initial:hover {
+  color: red;
+  background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(243 244 248) 10%, rgb(202 206 215) 40%, rgb(202 206 215) 60%, rgb(243 244 248) 90%, rgba(246 247 251) 100%);
+  transition: color 500ms ease;
+}
+
+.header-nav a:after, .header-contact a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: red;
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.header-nav a:hover:after,
+a:focus:after, .header-contact a:hover:after,
+a:focus:after  {
+  transform: translate3d(0, 0, 0);
+}
+
+.github-icon:hover {
+  background: red;
+}
+
+.scroll-container-bottom:hover > .arrow-bottom {
+  height: 40px;
+  background-color: black;
+  transition: height 0.3s ease-in;
+}
+
+.scroll-container-bottom:hover > .arrow-bottom:before {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 25px solid black;
+  transition: border 0.3s ease;
+}
+
+.scroll-container:hover > .arrow {
+  height: 75px;
+  background-color: black;
+  transition: height 0.3s ease-in;
+}
+
+.scroll-container:hover > .arrow:after {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid black;
+  transition: border 0.3s ease;
+}
+
+.project-card:hover > .project-preview {
+  transform: scale(1.5);
+}
+
+.project-card:hover > .project-card-content{
+  visibility: visible;
+  background: rgba(255, 255, 255, 0.75);
+  width: 120%;
+  transform: translateX(-10px);
+  border-radius: 15px;
+}
+
+.contact-info a:hover {
+  color: black;
+  transition: color 500ms ease;
+  text-decoration: underline;
+}

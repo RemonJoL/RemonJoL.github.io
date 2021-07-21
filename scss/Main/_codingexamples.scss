@@ -1,8 +1,11 @@
+@use "utility/colours";
+
 @import "utility/breakpoints";
 @import "utility/mixins";
 
-#coding-examples {
-
+.coding-examples {
+  flex-direction: column;
+  height: 100vh;
 }
 
 .coding-examples-container {
@@ -18,7 +21,5 @@
 
   @include xl {
     width: 35%;
-
   }
-
 }

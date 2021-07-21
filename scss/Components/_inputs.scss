@@ -1,46 +1,7 @@
+@use "utility/colours";
+
 @import "utility/breakpoints";
 @import "utility/mixins";
-
-.pagecheck {
-  // transform: translateX(211px);
-  display: none;
-}
-
-// Header home
-
-// Header aboutme
-
-#aboutme-check:checked ~ #aboutme {
-  display: block;
-}
-
-// Header portfolio
-
-// Header coding examples
-
-#coding-examples-check:checked ~ #coding-examples {
-  display: block;
-}
-
-#coding-examples-check:checked ~ #home {
-  display: none;
-}
-
-#coding-examples-check:checked ~ #coding-examples {
-  display: block;
-}
-
-// Header SCS scsscheme
-
-#scs-scheme-check:checked ~ #scs-scheme {
-  display: block;
-}
-
-#scs-scheme-check:checked ~ #home {
-  display: none;
-}
-
-// Header Contact
 
 .contactform-fieldset {
   margin: 0;
@@ -51,9 +12,7 @@
 
   @include sm {
     width: 100%;
-
   }
-
 }
 
 .fieldset-legend {
@@ -61,36 +20,58 @@
 }
 
 .main-contact input {
-  font-family: inherit;
-  font-size: 1.25rem;
+  @include inputfont;
+  position: relative;
+  display: block;
 }
 
 .main-contact input:focus {
-  outline: none;
-  border:none;
+  @include inputfocus;
 }
 
 .main-contact textarea {
-  font-size: 1.25rem;
-    font-family: inherit;
+  @include inputfont;
+  resize: vertical;
+  overflow: auto;
+
+  scrollbar-base-color: white;
+  scrollbar-face-color: red;
+  scrollbar-3dlight-color: white;
+  scrollbar-highlight-color: white;
+  scrollbar-track-color: colours.$highlight;
+  scrollbar-arrow-color: red;
+  scrollbar-shadow-color: white;
+  scrollbar-dark-shadow-color: white;
+}
+
+.main-contact textarea::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: colours.$highlight;
+  box-shadow: inset 2px 2px 1px colours.$panel-border;
+}
+
+.main-contact textarea::-webkit-scrollbar {
+  width: 12px;
+}
+
+.main-contact textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: colours.$darkred;
+  box-shadow: inset 1px 1px 1px white;
+}
+
+.main-contact textarea::-webkit-scrollbar-thumb:active {
+  background-color: red;
 }
 
 .main-contact textarea:focus {
-  outline: none;
-  border:none;
+  @include inputfocus;
 }
 
 .contactform-field {
-  border: none;
-  padding: 0.5rem;
-  width: 99%;
-  margin: 0 -10px 5px -15px;
+  @include inputformatting;
 }
 
 .contactform-textarea {
-  border: none;
-  line-height: 1rem;
-  width: 99%;
-  margin: 0 -10px 5px -15px;
-  padding: 0.5rem;
+  @include inputformatting;
 }

@@ -3,6 +3,55 @@
 @import "utility/breakpoints";
 @import "utility/mixins";
 
+.burger-container {
+  display: block;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 4;
+  text-transform: uppercase;
+
+  @include sm {
+    display: none;
+  }
+}
+
+.burger-button{
+  @include redborder;
+  border-radius: 15px;
+  height: 75px;
+  width: 75px;
+}
+
+.burger {
+  content: "";
+  background: red;
+  top: 25px;
+  left: 12px;
+  @include burgerstyle;
+}
+
+.burger:before {
+  content: "";
+  background: black;
+  top: -10px;
+  @include burgerstyle;
+}
+
+.burger:after {
+  content: "";
+  background: black;
+  top: 10px;
+  @include burgerstyle;
+}
+
+.burger-title {
+  position: absolute;
+  top: 44px;
+  left: 13px;
+  font-weight: 700;
+}
+
 .header-container {
   display: none;
   width: 205px;
@@ -10,39 +59,33 @@
   height: 100%;
   position: fixed;
   background-color: white;
-  box-shadow: 5px 0px 5px #555;
+  box-shadow: 5px 0px 5px colours.$dropshadow-red;
 
   @include sm {
     display: block;
   }
-
 }
 
 .header-initial {
-  padding: 0 15px;
+  color: black;
   font-size: 10rem;
-  border-bottom: 2px solid red;
   text-align: center;
-
+  @include header-sectionstyle;
 }
 
 .header-nav {
   font-size: 15px;
-  padding: 0 15px;
-  border-bottom: 2px solid red;
-
+  @include header-sectionstyle;
 }
 
 .header-contact {
   font-size: 15px;
-  padding: 0 15px;
-  border-bottom: 2px solid red;
+  @include header-sectionstyle;
 }
 
 .header-socialmedia {
   display: flex;
   padding: 0 15px;
-
 }
 
 .socialmedia-item {

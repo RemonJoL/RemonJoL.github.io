@@ -1,3 +1,5 @@
+@use "utility/colours";
+
 @import "utility/breakpoints";
 @import "utility/mixins";
 
@@ -9,11 +11,11 @@
   @include sm {
     padding: 15px 15px 15px 220px;
   }
-
 }
 
 .container-contact {
   margin-bottom: 15px;
+  display: flex;
 
   @include lg {
     width: 50%;
@@ -21,6 +23,7 @@
 }
 
 .contact-info-inner {
+
   @include redborder;
   padding: 15px;
 }
@@ -30,12 +33,10 @@
 
   @include md {
     padding: 0 15px;
-
   }
 }
 
 .contact-info-header {
-
     margin-top: -1.5rem;
 }
 
@@ -44,6 +45,7 @@
 }
 
 .contact-form {
+
   display: flex;
   @include sm {
     flex-wrap: wrap;
@@ -69,8 +71,7 @@
 }
 
 .contact-field-outer {
-  border: 2px solid red;
-  border-radius: 15px;
+  @include inputstyle;
   margin: 5px 0px;
 }
 
@@ -84,7 +85,6 @@
     padding-right: 5px;
     width: 50%;
   }
-
 }
 
 .contact-field-container:nth-of-type(2) {
@@ -93,25 +93,16 @@
     padding-left: 5px;
     width: 50%;
   }
-
 }
 
 .contact-field-outer-message {
-  border: 2px solid red;
-  border-radius: 15px;
+
+  @include inputstyle;
   margin: 5px 0px;
-  width: 100%;
 }
 
-.field-email {
-  @include sm {
-    color: red;
-    width: 100%;
+.field-single {
 
-  }
-}
-
-.field-subject {
   @include sm {
     color: red;
     width: 100%;
@@ -119,8 +110,7 @@
 }
 
 .submit-button-container {
-  border: 2px solid red;
-  border-radius: 15px;
-  width: 100%;
+
+  @include inputstyle;
   display: flex;
 }

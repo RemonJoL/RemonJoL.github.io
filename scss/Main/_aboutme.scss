@@ -1,10 +1,14 @@
+@use "utility/colours";
+
 @import "utility/breakpoints";
 @import "utility/mixins";
 
-#aboutme {
-
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  align-content: normal;
+  height: 100vh;
 }
-
 
 .about-container {
   @include redborder;
@@ -12,6 +16,7 @@
   padding: 0 15px;
   margin: auto;
   text-align: center;
+  background: white;
 
   @include md {
     width: 50%;
@@ -19,7 +24,6 @@
 
   @include xl {
     width: 35%;
-
   }
 
 }

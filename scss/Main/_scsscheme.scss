@@ -1,35 +1,39 @@
+@use "utility/colours";
+
 @import "utility/breakpoints";
 @import "utility/mixins";
 
 .scs-scheme {
-  flex-flow: column;
+  height: 100vh;
+  justify-content: space-between;
 
   @include xl {
-    flex-flow: row;
+  flex-direction: column;
   }
-
-  @include xxl {
-  }
-
 }
 
 .scs-container-outer {
-  max-width: 500px;
+  width: 250px;
   margin: 30px auto 0;
 
-  @include sm {
-    padding: 0 15px;
+  @include s {
+    width: 300px;
+  }
 
+  @include sm {
+    width: 310px;
   }
 
   @include md {
+    width: 470px;
   }
 
   @include lg {
+    width: 500px;
   }
 
   @include xl {
-    width: 320px;
+    width: 300px;
   }
 
   @include xxl {
@@ -38,19 +42,15 @@
 }
 
 .scs-container-outer:nth-of-type(1) {
+  
   @include xl {
-    margin: 0 0 0 auto;
+    margin: 0 15px 0 auto;
   }
-    @include xxl {
-      margin: 0 15px 0 auto;
-    }
 }
 
 .scs-container-outer:nth-of-type(2) {
+
   @include xl {
-    margin: 0;
-  }
-  @include xxl {
     margin: 0 15px;
   }
 }
@@ -59,32 +59,35 @@
   margin-bottom: 30px;
 
   @include xl {
-    margin: 0 auto 0 0;
+    margin: 0 auto 0 15px;
   }
-    @include xxl {
-      margin: 0 auto 0 15px;
-    }
 }
 
 .scs-container {
+  background: white;
   @include redborder;
   padding: 15px 15px 30px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
+  @include lg {
+    width: auto;
+  }
 }
 
 .scs-container-header {
   height: 5rem;
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 
 .scs-container-content {
 
   @include xl {
-    height: 375px;
+    height: 400px;
   }
 
   @include xxl {
@@ -92,22 +95,10 @@
   }
 }
 
-.scs-intro {
-}
-
-.treehouse {
+.scs-container-other {
   margin-top: 15px;
 
   @include xl {
     margin-top: 0;
-
   }
-}
-
-.about-netmatters {
-  margin-top: 15px;
-
-@include xl {
-  margin-top: 0;
-}
 }

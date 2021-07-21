@@ -1,6 +1,8 @@
+@use "utility/colours";
+
 .submit-button {
   padding: 0.5rem;
-  background-color: red;
+  background-color: colours.$darkred;
   width: 100%;
   border-radius: 15px;
   border: 2px solid white;
@@ -9,6 +11,10 @@
   text-align: center;
 }
 
+.submit-button:hover {
+  background-color: red;
+}
+
 .submit-button:active {
-  box-shadow: inset 5px 5px 5px #333;
+  box-shadow: inset 5px 5px 5px colours.$dropshadow-black;
 }
