@@ -1,5 +1,8 @@
 @use "utility/colours";
 
+@import "utility/breakpoints";
+@import "utility/mixins";
+
 .header-initial {
   transition: color 200ms ease-in-out;
 }
@@ -47,16 +50,26 @@ a:focus:after  {
 }
 
 .scroll-container:hover > .arrow {
-  height: 75px;
+  height: 40px;
   background-color: black;
   transition: height 0.3s ease-in;
+
+  @include sm {
+    height: 75px;
+  }
 }
 
 .scroll-container:hover > .arrow:after {
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-top: 50px solid black;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 25px solid black;
   transition: border 0.3s ease;
+
+  @include sm {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid black;
+  }
 }
 
 .project-card:hover > .project-preview {

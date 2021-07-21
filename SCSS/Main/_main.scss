@@ -20,15 +20,15 @@ body {
   background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(243 244 248) 30%, rgb(202 206 215) 50%, rgb(243 244 248) 70%, rgba(246 247 251) 100%);
 
   @include sm {
-  background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(246 247 251) 15%, rgb(243 244 248) 45%, rgb(202 206 215) 65%, rgb(243 244 248) 85%, rgba(246 247 251) 100%);
+    background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(246 247 251) 15%, rgb(243 244 248) 45%, rgb(202 206 215) 65%, rgb(243 244 248) 85%, rgba(246 247 251) 100%);
   }
 
   @include md {
-  background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(246 247 251) 10%, rgb(243 244 248) 40%, rgb(202 206 215) 60%, rgb(243 244 248) 80%, rgba(246 247 251) 100%);
+    background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(246 247 251) 10%, rgb(243 244 248) 40%, rgb(202 206 215) 60%, rgb(243 244 248) 80%, rgba(246 247 251) 100%);
   }
 
   @include lg {
-  background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(246 247 251) 5%, rgb(243 244 248) 35%, rgb(202 206 215) 55%, rgb(243 244 248) 75%, rgba(246 247 251) 100%);
+    background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(246 247 251) 5%, rgb(243 244 248) 35%, rgb(202 206 215) 55%, rgb(243 244 248) 75%, rgba(246 247 251) 100%);
   }
 }
 
@@ -75,9 +75,9 @@ body {
 
 .header-title-container {
   @include overlay;
-  padding: 15px;
-  width: 250px;
-  margin: auto;
+    padding: 15px;
+    width: 250px;
+    margin: auto;
 
   @include sm {
     width: 340px;
@@ -94,16 +94,20 @@ body {
 
 .scroll-container-bottom {
   @include overlay;
-  padding: 15px 15px;
-  height: 125px;
-  display: flex;
-  flex-direction: column-reverse;
+    padding: 15px 15px;
+    height: 125px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .scroll-container {
   @include overlay;
-  padding: 15px 15px;
+    padding: 15px 15px;
+    height: 135px;
+
+  @include sm {
   height: 200px;
+  }
 }
 
 .arrow-bottom {
@@ -139,13 +143,18 @@ body {
 .arrow {
   margin: -15px auto 0;
   position: relative;
-  width: 20px;
-  height: 50px;
+  width: 10px;
+  height: 25px;
   background-color: black;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   top: 0;
   transition: height 0.3s ease-in;
+
+  @include sm {
+    width: 20px;
+    height: 50px;
+  }
 }
 
 .arrow:after {
@@ -155,10 +164,16 @@ body {
   left: -70%;
   width: 0;
   height: 0;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-top: 25px solid black;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid black;
   transition: border 0.3s ease;
+
+  @include sm {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid black;
+  }
 }
 
 .rivets {
