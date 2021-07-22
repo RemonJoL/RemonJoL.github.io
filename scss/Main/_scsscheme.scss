@@ -39,6 +39,10 @@
   @include xxl {
     width: 375px;
   }
+
+  @include mh {
+    max-width: 80%;
+  }
 }
 
 .scs-container-outer:nth-of-type(1) {

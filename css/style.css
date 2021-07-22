@@ -1034,6 +1034,11 @@ body {
     width: 375px;
   }
 }
+@media (max-height: 599px) {
+  .scs-container-outer {
+    max-width: 80%;
+  }
+}
 
 @media (min-width: 1200px) {
   .scs-container-outer:nth-of-type(1) {
