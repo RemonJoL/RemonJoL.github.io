@@ -99,6 +99,12 @@ a:focus:after  {
   border-radius: 15px;
 }
 
+.project-card label:hover {
+  float: right;
+  color: red;
+  transition: color 0.5s ease;
+}
+
 .contact-info a:hover {
   color: black;
   transition: color 500ms ease;

@@ -229,26 +229,38 @@ a:visited {
 
 #project-descr-expand-1:checked + .project-card-content {
   height: 100%;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
 }
 
 #project-descr-expand-2:checked + .project-card-content {
   height: 100%;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
 }
 
 #project-descr-expand-3:checked + .project-card-content {
   height: 100%;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
 }
 
 #project-descr-expand-4:checked + .project-card-content {
   height: 100%;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
 }
 
 #project-descr-expand-5:checked + .project-card-content {
   height: 100%;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
 }
 
 #project-descr-expand-6:checked + .project-card-content {
   height: 100%;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
 }
 
 .project-card label {
@@ -256,13 +268,6 @@ a:visited {
   -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
   cursor: pointer;
-}
-
-.project-card label:hover {
-  float: right;
-  color: red;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
 }
 
 .project-card-content span::after {
@@ -408,6 +413,13 @@ a:focus:after {
   -webkit-transform: translateX(-10px);
           transform: translateX(-10px);
   border-radius: 15px;
+}
+
+.project-card label:hover {
+  float: right;
+  color: red;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 .contact-info a:hover {
@@ -925,10 +937,10 @@ body {
   padding: 15px 25px;
   -webkit-transform: translateX(-450px);
           transform: translateX(-450px);
-  -webkit-transition: -webkit-transform 0.5s ease 0.5s;
-  transition: -webkit-transform 0.5s ease 0.5s;
-  transition: transform 0.5s ease 0.5s;
-  transition: transform 0.5s ease 0.5s, -webkit-transform 0.5s ease 0.5s;
+  -webkit-transition: height 0.5s ease, -webkit-transform 0.5s ease 0.5s;
+  transition: height 0.5s ease, -webkit-transform 0.5s ease 0.5s;
+  transition: transform 0.5s ease 0.5s, height 0.5s ease;
+  transition: transform 0.5s ease 0.5s, height 0.5s ease, -webkit-transform 0.5s ease 0.5s;
   height: 77px;
   overflow: hidden;
   width: 105%;
