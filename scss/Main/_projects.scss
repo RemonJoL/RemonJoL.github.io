@@ -59,7 +59,6 @@
   padding: 15px 25px;
   transform: translateX(-450px);
   transition: transform 0.5s ease 0.5s, height 0.5s ease;
-  height: 77px;
   overflow: hidden;
   width: 100%;
 }
@@ -68,16 +67,4 @@
   height: 100%;
   width: 100%;
   transition: 0.8s ease;
-}
-
-.project-card input {
-  display: none;
-}
-
-.projectdetails {
-  display: none;
-
-  @include s {
-    display: block;
-  }
 }

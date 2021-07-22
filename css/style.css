@@ -233,59 +233,6 @@ a:visited {
   padding-top: 15px;
 }
 
-#project-descr-expand-1:checked + .project-card-content {
-  height: 100%;
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
-}
-
-#project-descr-expand-2:checked + .project-card-content {
-  height: 100%;
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
-}
-
-#project-descr-expand-3:checked + .project-card-content {
-  height: 100%;
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
-}
-
-#project-descr-expand-4:checked + .project-card-content {
-  height: 100%;
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
-}
-
-#project-descr-expand-5:checked + .project-card-content {
-  height: 100%;
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
-}
-
-#project-descr-expand-6:checked + .project-card-content {
-  height: 100%;
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
-}
-
-.project-card label {
-  float: right;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
-  cursor: pointer;
-}
-
-.project-card-content span::after {
-  content: "Read More";
-  text-decoration: underline;
-}
-
-.project-card input:checked + .project-card-content span:after {
-  content: "Close";
-  text-decoration: underline;
-}
-
 .submit-button {
   padding: 0.5rem;
   background-color: #bd0000;
@@ -947,7 +894,6 @@ body {
   transition: height 0.5s ease, -webkit-transform 0.5s ease 0.5s;
   transition: transform 0.5s ease 0.5s, height 0.5s ease;
   transition: transform 0.5s ease 0.5s, height 0.5s ease, -webkit-transform 0.5s ease 0.5s;
-  height: 77px;
   overflow: hidden;
   width: 100%;
 }
@@ -957,19 +903,6 @@ body {
   width: 100%;
   -webkit-transition: 0.8s ease;
   transition: 0.8s ease;
-}
-
-.project-card input {
-  display: none;
-}
-
-.projectdetails {
-  display: none;
-}
-@media (min-width: 425px) {
-  .projectdetails {
-    display: block;
-  }
 }
 
 .aboutme {
