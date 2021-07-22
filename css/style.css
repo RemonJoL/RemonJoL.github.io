@@ -18,6 +18,12 @@ a:visited {
 .project-card p {
   display: inline-block;
   margin: 0;
+  font-size: 0.85rem;
+}
+@media (min-width: 425px) {
+  .project-card p {
+    font-size: 1rem;
+  }
 }
 
 .scroll-container h2 {
@@ -271,7 +277,7 @@ a:visited {
 }
 
 .project-card-content span::after {
-  content: "Read More";
+  content: "More";
   text-decoration: underline;
 }
 
@@ -410,8 +416,8 @@ a:focus:after {
 .project-card:hover > .project-card-content {
   visibility: visible;
   background: rgba(255, 255, 255, 0.75);
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
   border-radius: 15px;
 }
 
@@ -943,7 +949,7 @@ body {
   transition: transform 0.5s ease 0.5s, height 0.5s ease, -webkit-transform 0.5s ease 0.5s;
   height: 77px;
   overflow: hidden;
-  width: 105%;
+  width: 100%;
 }
 
 .project-preview {
@@ -955,6 +961,15 @@ body {
 
 .project-card input {
   display: none;
+}
+
+.projectdetails {
+  display: none;
+}
+@media (min-width: 425px) {
+  .projectdetails {
+    display: block;
+  }
 }
 
 .aboutme {

@@ -23,6 +23,11 @@ a:visited {
 .project-card p {
   display: inline-block;
   margin: 0;
+  font-size: 0.85rem;
+
+  @include s {
+    font-size: 1rem;
+  }
 }
 
 .scroll-container h2 {

@@ -95,7 +95,7 @@ a:focus:after  {
 .project-card:hover > .project-card-content{
   visibility: visible;
   background: rgba(255, 255, 255, 0.75);
-  transform: translateX(-10px);
+  transform: translateX(0px);
   border-radius: 15px;
 }
 
