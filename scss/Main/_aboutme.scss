@@ -8,6 +8,10 @@
   flex-direction: column;
   align-content: normal;
   height: 100vh;
+
+  @include xsh {
+    flex-direction: row;
+  }
 }
 
 .about-container {
@@ -16,6 +20,7 @@
   margin: auto;
   text-align: center;
   background: white;
+  max-width: 300px;
 
   @include s {
     width: 325px;
@@ -23,5 +28,10 @@
 
   @include md {
     width: 500px;
+    max-width: none;
+  }
+
+  @include xsh {
+    margin: 30px auto;
   }
 }

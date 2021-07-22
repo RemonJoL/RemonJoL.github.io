@@ -12,6 +12,10 @@
   @include sm {
     padding: 15px 15px 15px 220px;
   }
+
+  @include mh {
+    padding: 15px;
+  }
 }
 
 .container-project {
@@ -54,11 +58,18 @@
   z-index: 1;
   padding: 15px 25px;
   transform: translateX(-450px);
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease 0.5s;
+  height: 77px;
+  overflow: hidden;
+  width: 105%;
 }
 
 .project-preview {
   height: 100%;
   width: 100%;
   transition: 0.8s ease;
+}
+
+.project-card input {
+  display: none;
 }

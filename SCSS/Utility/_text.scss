@@ -21,6 +21,7 @@ a:visited {
 }
 
 .project-card p {
+  display: inline-block;
   margin: 0;
 }
 
@@ -47,6 +48,11 @@ a:visited {
   @include sm {
     font-size: 2rem;
   }
+
+  @include sh {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
 }
 
 .header-title-container h2 {
@@ -55,6 +61,16 @@ a:visited {
   @include sm {
     font-size: 1.5rem;
   }
+
+  @include sh {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+  }
+}
+
+.header-initial span {
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
 }
 
 .contact-info a {
@@ -76,6 +92,7 @@ a:visited {
   background: white;
   margin: 0;
   display: table;
+  line-height: 1.25rem;
 }
 
 .scroll-container-bottom h2 {
@@ -100,4 +117,9 @@ a:visited {
 .scs-scheme h3 {
   text-align: center;
   margin: 0 auto;
+}
+
+.scs-container-content a {
+  color: red;
+  text-decoration: underline;
 }

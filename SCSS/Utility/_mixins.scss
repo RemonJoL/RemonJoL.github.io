@@ -1,5 +1,26 @@
 @use "utility/colours";
 
+// Short height devices
+@mixin xsh {
+   @media (max-height: #{$maxh345}) {
+       @content;
+   }
+}
+
+// Short height devices
+@mixin sh {
+   @media (max-height: #{$maxh480}) {
+       @content;
+   }
+}
+
+// Medium height devices
+@mixin mh {
+   @media (max-height: #{$maxh599}) {
+       @content;
+   }
+}
+
 // Smaller devices
 @mixin s {
    @media (min-width: #{$min425}) {
@@ -45,7 +66,7 @@
 @mixin redborder {
   border: 2px solid red;
   border-radius: 15px;
-  box-shadow: 7px 7px 5px #400000;
+  box-shadow: 4px 4px 7px #400000;
   background: white;
 }
 
@@ -62,14 +83,14 @@
 
 @mixin burgerstyle {
   height: 6px;
-  width: 50px;
+  width: 40px;
   position: absolute;
   border-radius: 3px;
 }
 
 @mixin inputformatting {
   border: none;
-  padding: 0.5rem;
+  padding: 10px 0.5rem 15px;
   width: 99%;
   margin: 0 -10px 5px -15px;
   line-height: 1.25rem;
@@ -89,4 +110,15 @@
   background: colours.$background-overlay;
   box-shadow: 0px 0px 5px colours.$dropshadow-overlay;
   border-radius: 15px;
+}
+
+@mixin ie-scrollbar {
+  scrollbar-base-color: white;
+  scrollbar-face-color: red;
+  scrollbar-3dlight-color: white;
+  scrollbar-highlight-color: white;
+  scrollbar-track-color: colours.$highlight;
+  scrollbar-arrow-color: red;
+  scrollbar-shadow-color: white;
+  scrollbar-dark-shadow-color: white;
 }

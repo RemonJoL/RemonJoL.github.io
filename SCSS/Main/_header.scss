@@ -6,28 +6,35 @@
 .burger-container {
   display: block;
   position: fixed;
-  top: 15px;
-  left: 15px;
+  top: 10px;
+  left: 10px;
   z-index: 4;
   text-transform: uppercase;
 
   @include sm {
     display: none;
   }
+
+  @include mh {
+    display: block;
+  }
 }
 
 .burger-button{
-  @include redborder;
+  border: 2px solid red;
   border-radius: 15px;
-  height: 75px;
-  width: 75px;
+  box-shadow: 2px 2px 4px #400000;
+  background: white;
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
 }
 
 .burger {
   content: "";
   background: red;
-  top: 25px;
-  left: 12px;
+  top: 17px;
+  left: 6px;
   @include burgerstyle;
 }
 
@@ -47,9 +54,10 @@
 
 .burger-title {
   position: absolute;
-  top: 44px;
-  left: 13px;
+  top: 32px;
+  left: 8px;
   font-weight: 700;
+  font-size: 0.7rem
 }
 
 .header-container {
@@ -59,18 +67,49 @@
   height: 100%;
   position: fixed;
   background-color: white;
-  box-shadow: 5px 0px 5px colours.$dropshadow-red;
+  box-shadow: 2px 0px 5px colours.$dropshadow-red;
 
   @include sm {
     display: block;
   }
+
+  @include mh {
+    display: none;
+  }
+}
+
+.header-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: colours.$highlight;
+  box-shadow: inset 2px 2px 1px colours.$panel-border;
+}
+
+.header-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.header-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: colours.$darkred;
+  box-shadow: inset 1px 1px 1px white;
+}
+
+.header-container::-webkit-scrollbar-thumb:active {
+  background-color: red;
 }
 
 .header-initial {
   color: black;
   font-size: 10rem;
   text-align: center;
+  display: flex;
   @include header-sectionstyle;
+  padding: 0;
+  background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(243 244 248) 10%, rgb(202 206 215) 40%, rgb(202 206 215) 60%, rgb(243 244 248) 90%, rgba(246 247 251) 100%);
+}
+
+.header-letter {
+  width: 100%;
 }
 
 .header-nav {

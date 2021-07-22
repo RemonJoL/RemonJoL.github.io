@@ -11,6 +11,10 @@
   @include sm {
     padding: 15px 15px 15px 220px;
   }
+
+  @include mh {
+    padding: 15px;
+  }
 }
 
 .container-contact {
@@ -64,15 +68,15 @@
 .field-border {
   display: inline-block;
   padding: 0 2px;
-  margin: -0.5rem 0 0 1rem;
+  margin: -0.7rem 0 0 1rem;
   line-height: 1rem;
-  color: red;
+  color: black;
   width: 100%;
 }
 
 .contact-field-outer {
   @include inputstyle;
-  margin: 5px 0px;
+  margin: 5px 0px 15px;
 }
 
 .contact-field-container {
@@ -82,7 +86,7 @@
 .contact-field-container:nth-of-type(1) {
 
   @include sm {
-    padding-right: 5px;
+    padding-right: 10px;
     width: 50%;
   }
 }
@@ -90,15 +94,14 @@
 .contact-field-container:nth-of-type(2) {
 
   @include sm {
-    padding-left: 5px;
+    padding-left: 10px;
     width: 50%;
   }
 }
 
 .contact-field-outer-message {
-
   @include inputstyle;
-  margin: 5px 0px;
+  margin: 5px 0px 15px;
 }
 
 .field-single {
@@ -110,7 +113,6 @@
 }
 
 .submit-button-container {
-
   @include inputstyle;
   display: flex;
 }

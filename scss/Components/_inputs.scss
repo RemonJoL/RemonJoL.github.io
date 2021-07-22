@@ -27,17 +27,9 @@
 
 .main-contact textarea {
   @include inputfont;
+  @include ie-scrollbar;
   resize: vertical;
   overflow: auto;
-
-  scrollbar-base-color: white;
-  scrollbar-face-color: red;
-  scrollbar-3dlight-color: white;
-  scrollbar-highlight-color: white;
-  scrollbar-track-color: colours.$highlight;
-  scrollbar-arrow-color: red;
-  scrollbar-shadow-color: white;
-  scrollbar-dark-shadow-color: white;
 }
 
 .main-contact textarea::-webkit-scrollbar-track {
@@ -70,4 +62,50 @@
 
 .contactform-textarea {
   @include inputformatting;
+  padding-top: 15px;
+}
+
+#project-descr-expand-1:checked + .project-card-content {
+  height: 100%;
+}
+
+#project-descr-expand-2:checked + .project-card-content {
+  height: 100%;
+}
+
+#project-descr-expand-3:checked + .project-card-content {
+  height: 100%;
+}
+
+#project-descr-expand-4:checked + .project-card-content {
+  height: 100%;
+}
+
+#project-descr-expand-5:checked + .project-card-content {
+  height: 100%;
+}
+
+#project-descr-expand-6:checked + .project-card-content {
+  height: 100%;
+}
+
+.project-card label {
+  float: right;
+  transition: color 0.5s ease;
+}
+
+.project-card label:hover {
+  float: right;
+  color: red;
+  transition: color 0.5s ease;
+}
+
+.project-card-content span::after {
+  content: "Read More";
+  text-decoration: underline;
+}
+
+.project-card input:checked + .project-card-content span:after {
+  content: "Close";
+  text-decoration: underline;
 }
