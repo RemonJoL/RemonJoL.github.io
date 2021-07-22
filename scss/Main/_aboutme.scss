@@ -34,4 +34,12 @@
   @include xsh {
     margin: 30px auto;
   }
+
+  @include sh{
+    width: 500px;
+  }
+
+  @include mh {
+    max-width: 80%;
+  }
 }

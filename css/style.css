@@ -954,6 +954,16 @@ body {
     margin: 30px auto;
   }
 }
+@media (max-height: 480px) {
+  .about-container {
+    width: 500px;
+  }
+}
+@media (max-height: 599px) {
+  .about-container {
+    max-width: 80%;
+  }
+}
 
 .coding-examples {
   -webkit-box-orient: vertical;
@@ -982,6 +992,16 @@ body {
 @media (min-width: 1200px) {
   .coding-examples-container {
     width: 35%;
+  }
+}
+@media (max-height: 480px) {
+  .coding-examples-container {
+    width: 500px;
+  }
+}
+@media (max-height: 599px) {
+  .coding-examples-container {
+    max-width: 80%;
   }
 }
 
