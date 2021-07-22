@@ -40,6 +40,10 @@
     width: 375px;
   }
 
+  @include sh{
+    width: 500px;
+  }
+
   @include mh {
     max-width: 80%;
   }
