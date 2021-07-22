@@ -277,7 +277,7 @@ a:visited {
 }
 
 .project-card-content span::after {
-  content: "More";
+  content: "Read More";
   text-decoration: underline;
 }
 
