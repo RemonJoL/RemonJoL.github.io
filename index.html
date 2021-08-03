@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
+    <script src="js/jquery-3.6.0.min.js"></script>
+
     <title>Remon Jansen of Lorkeers</title>
     <meta name="description" content="Remon Jansen of Lorkeers' Web / Software Dev Portfolio">
     <meta name="author" content="Remon Jansen of Lorkeers">
@@ -54,6 +56,19 @@
               <a href="https://github.com/RemonJoL" target="_blank"><img src="images/GitHub-Mark-32px.png" alt="GitHub"></a>
             </div>
 
+            <!-- Colour changer slider -->
+            <!-- <ul>
+              <li>
+                <label for="filter-select">Choose a filter function:</label>
+                <select id="filter-select">
+                  <option selected>hue-rotate</option>
+                </select>
+              </li>
+              <li>
+                <input type="range"><output></output>
+              </li>
+            </ul> -->
+
           </div>
 
         </div>
@@ -62,9 +77,9 @@
 
       <div class="section main-header">
 
-        <div class="header-title header-title-container">
+        <div class="header-title header-title-container" id="header-title">
           <h1>My name is Remon Jansen of Lorkeers</h1>
-          <h2>I'm a Web / Software Developer</h2>
+          <h2 class="typewriterItem"></h2>
         </div>
 
         <a href="#portfolio">
@@ -323,6 +338,57 @@
       </div>
 
     </div>
+
+    <script src="js/typewriter.js"></script>
+
+    <!-- Colour changer script -->
+    <!-- <script>
+    const selectElem = document.querySelector('select');
+    const divElem = document.querySelector('div');
+    const slider = document.querySelector('input');
+    const output = document.querySelector('output');
+    const curValue = document.querySelector('p code');
+
+    selectElem.addEventListener('change', () => {
+      setSlider(selectElem.value);
+      setDiv(selectElem.value);
+    });
+
+    slider.addEventListener('input', () => {
+      setDiv(selectElem.value);
+    });
+
+    function setSlider(filter) {
+      (filter === 'hue-rotate')
+        slider.value = 0;
+        slider.min = 0;
+        slider.max = 360;
+        slider.step = 0.5;
+        slider.setAttribute('data-unit', 'deg');
+    }
+
+    function setDiv(filter) {
+        divElem.style.filter = `${selectElem.value}(${slider.value}${slider.getAttribute('data-unit')}`;
+      updateOutput();
+      updateCurValue();
+    }
+
+    function updateOutput() {
+      output.textContent = slider.value;
+    }
+
+    function updateCurValue() {
+      curValue.textContent = `filter: ${divElem.style.filter}`;
+    }
+
+    setSlider(selectElem.value);
+    setDiv(selectElem.value);
+
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+    // object1.style.hue-rotate = this.value;
+  }
+  </script> -->
 
   </body>
 

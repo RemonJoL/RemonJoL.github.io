@@ -40,6 +40,12 @@ a:focus:after  {
   background: red;
 }
 
+// Typewriter cursor
+@keyframes blink {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+
 .scroll-container-bottom:hover > .arrow-bottom {
   height: 40px;
   background-color: black;
