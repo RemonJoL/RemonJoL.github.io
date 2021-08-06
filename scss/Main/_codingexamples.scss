@@ -5,22 +5,23 @@
 
 .coding-examples {
   flex-direction: column;
-  height: 100vh;
+  // height: 100vh;
+  margin: auto;
 }
 
 .coding-examples-container {
   @include redborder;
-  max-width: 350px;
-  padding: 0 15px;
-  margin: auto;
-  text-align: center;
+  max-width: 700px;
+  padding: 15px 15px;
+  margin: 30px auto;
+  position: relative;
+  width: 95%;
 
   @include md {
-    width: 50%;
   }
 
   @include xl {
-    width: 35%;
+    // width: 35%;
   }
 
   @include sh{
@@ -30,4 +31,72 @@
   @include mh {
     max-width: 80%;
   }
+}
+
+.coding-examples-title {
+  text-align: center;
+}
+
+.coding-example {
+
+  @include md {
+  margin: 15px;
+  }
+}
+
+.coding-example:before {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: red;
+  margin: 50px 15px;
+  left: 0;
+  right: 0;
+}
+
+.coding-example-title {
+  text-align: center;
+  margin: 15px;
+
+}
+
+.coding-example-code {
+  @include ie-scrollbar;
+  @include inputstyle;
+  height: 300px;
+  overflow: auto;
+  background: #f3f4f8;
+  padding: 15px;
+  text-align: left;
+  box-shadow: inset 1px 1px 10px;
+
+}
+
+.coding-example-code::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: colours.$highlight;
+  box-shadow: inset 2px 2px 1px colours.$panel-border;
+}
+
+.coding-example-code::-webkit-scrollbar {
+  width: 12px;
+}
+
+.coding-example-code::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: colours.$darkred;
+  box-shadow: inset 1px 1px 1px white;
+}
+
+.coding-example-code::-webkit-scrollbar-thumb:active {
+  background-color: red;
+}
+
+.coding-example-description-title {
+  text-align: center;
+}
+
+.coding-example-comment:hover {
+  color: white;
+  background: red;
 }

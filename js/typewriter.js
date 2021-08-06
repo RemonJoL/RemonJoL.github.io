@@ -254,6 +254,7 @@ function typeWriter(){
 
 }
 
+// Runs the script when it's loaded in 
 typeWriter();
 
 

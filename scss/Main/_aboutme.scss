@@ -60,10 +60,10 @@
 
 .skill-icons3 {
   margin-bottom: 15px;
- @include md {
-   margin: auto;
+  @include md {
+    margin: auto;
   }
- @include sh {
-   margin: auto;
+  @include sh {
+    margin: auto;
   }
 }

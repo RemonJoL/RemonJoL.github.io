@@ -1123,7 +1123,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  margin: auto;
 }
 
 .coding-examples-container {
@@ -1132,20 +1132,11 @@ body {
   -webkit-box-shadow: 4px 4px 7px #400000;
           box-shadow: 4px 4px 7px #400000;
   background: white;
-  max-width: 350px;
-  padding: 0 15px;
-  margin: auto;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .coding-examples-container {
-    width: 50%;
-  }
-}
-@media (min-width: 1200px) {
-  .coding-examples-container {
-    width: 35%;
-  }
+  max-width: 700px;
+  padding: 15px 15px;
+  margin: 30px auto;
+  position: relative;
+  width: 95%;
 }
 @media (max-height: 480px) {
   .coding-examples-container {
@@ -1156,6 +1147,83 @@ body {
   .coding-examples-container {
     max-width: 80%;
   }
+}
+
+.coding-examples-title {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .coding-example {
+    margin: 15px;
+  }
+}
+
+.coding-example:before {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: red;
+  margin: 50px 15px;
+  left: 0;
+  right: 0;
+}
+
+.coding-example-title {
+  text-align: center;
+  margin: 15px;
+}
+
+.coding-example-code {
+  scrollbar-base-color: white;
+  scrollbar-face-color: red;
+  scrollbar-3dlight-color: white;
+  scrollbar-highlight-color: white;
+  scrollbar-track-color: #eee;
+  scrollbar-arrow-color: red;
+  scrollbar-shadow-color: white;
+  scrollbar-dark-shadow-color: white;
+  border: 2px solid red;
+  border-radius: 15px;
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  background: #f3f4f8;
+  padding: 15px;
+  text-align: left;
+  -webkit-box-shadow: inset 1px 1px 10px;
+          box-shadow: inset 1px 1px 10px;
+}
+
+.coding-example-code::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #eee;
+  -webkit-box-shadow: inset 2px 2px 1px #ccc;
+          box-shadow: inset 2px 2px 1px #ccc;
+}
+
+.coding-example-code::-webkit-scrollbar {
+  width: 12px;
+}
+
+.coding-example-code::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #bd0000;
+  -webkit-box-shadow: inset 1px 1px 1px white;
+          box-shadow: inset 1px 1px 1px white;
+}
+
+.coding-example-code::-webkit-scrollbar-thumb:active {
+  background-color: red;
+}
+
+.coding-example-description-title {
+  text-align: center;
+}
+
+.coding-example-comment:hover {
+  color: white;
+  background: red;
 }
 
 .scs-scheme {
