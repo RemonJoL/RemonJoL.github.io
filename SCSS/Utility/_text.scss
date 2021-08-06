@@ -17,7 +17,24 @@ a:visited {
 }
 
 .project-card h3 {
-  margin: 0;
+  margin: -10px 0 0;
+  font-size: 1rem;
+
+  @include s {
+    margin: 0;
+    font-size: 1.17rem;
+  }
+
+  @include md {
+    margin: -15px 0 0;
+    font-size: 1rem;
+  }
+
+  @include lg {
+    margin: 0;
+    font-size: 1.17rem;
+  }
+
 }
 
 .project-card p {
@@ -27,6 +44,14 @@ a:visited {
 
   @include s {
     font-size: 1rem;
+  }
+
+  @include md {
+    font-size: 0.85rem;
+  }
+
+  @include lg {
+    font-size: 1rem;    
   }
 }
 
