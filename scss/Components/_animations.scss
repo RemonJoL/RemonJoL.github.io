@@ -46,6 +46,7 @@ a:focus:after  {
   to {opacity: 0.0;}
 }
 
+// Scroll buttons
 .scroll-container-bottom:hover > .arrow-bottom {
   height: 40px;
   background-color: black;
@@ -94,6 +95,7 @@ a:focus:after  {
   }
 }
 
+// Project cards
 .project-card:hover > .project-preview {
   transform: scale(1.5);
 }
@@ -103,6 +105,7 @@ a:focus:after  {
   background: rgba(255, 255, 255, 0.75);
   transform: translateX(0px);
   border-radius: 15px;
+  transition: transform 0.5s ease 0.5s;
 }
 
 .project-card label:hover {
@@ -111,7 +114,7 @@ a:focus:after  {
   transition: color 0.5s ease;
 }
 
-.contact-info a:hover {
+.contact-info-content a:hover {
   color: black;
   transition: color 500ms ease;
 }
@@ -120,4 +123,22 @@ a:focus:after  {
   color: black;
   transition: color 500ms ease;
   text-decoration: underline;
+}
+
+.about-content a:hover {
+  color: black;
+  transition: color 500ms ease;
+  text-decoration: underline;
+}
+
+.skill-icon img:nth-child(2) {
+  display: none;
+}
+
+.skill-icon:hover img:nth-child(2) {
+  display: block;
+}
+
+.skill-icon:hover img:nth-child(1) {
+  display: none;
 }

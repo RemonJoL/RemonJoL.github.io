@@ -7,17 +7,22 @@
   display: flex;
   flex-direction: column;
   align-content: normal;
+
+  @include mh {
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  @include md {
   height: 100vh;
 
-  @include xsh {
-    flex-direction: row;
   }
 }
 
 .about-container {
   @include redborder;
   padding: 0 15px;
-  margin: auto;
+  margin: 30px auto;
   text-align: center;
   background: white;
   max-width: 300px;
@@ -29,6 +34,7 @@
   @include md {
     width: 500px;
     max-width: none;
+    margin: auto;
   }
 
   @include xsh {
@@ -41,5 +47,23 @@
 
   @include mh {
     max-width: 80%;
+    margin: 30px auto;
+  }
+}
+
+.skill-icons2 {
+  margin-bottom: 15px;
+ @include xs {
+   margin: auto;
+  }
+}
+
+.skill-icons3 {
+  margin-bottom: 15px;
+ @include md {
+   margin: auto;
+  }
+ @include sh {
+   margin: auto;
   }
 }

@@ -227,7 +227,7 @@ function typeWriter(){
         // The script then waits 100ms before running again
       document.querySelector(".typewriterItem").textContent = text[textIndex].slice(0, i);
       i--;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 75);
     }
     // If the counter is 0, depending on the textIndex counter that tells what sentence to type out, it will:
     else {

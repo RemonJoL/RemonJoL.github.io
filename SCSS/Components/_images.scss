@@ -11,3 +11,44 @@
 .scs-container-header-img {
   width: 100%;
 }
+
+.contact-icon-email {
+  width: 80%;
+  margin: auto;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  margin: 29px auto;
+}
+}
+
+.contact-icon-phone {
+  height: 75%;
+  margin: auto;
+}
+
+.contact-icon-discord {
+  width: 100%;
+  margin: auto;
+  color: red;
+}
+
+.skill-icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.skill-icon {
+  width: 75px;
+  height: 75px;
+  border: 2px solid red;
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+  box-shadow: inset 2px 2px 5px;
+}
+
+.skill-img {
+  width: 85%;
+  height: 85%;
+  margin: auto;
+}

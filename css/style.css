@@ -79,20 +79,29 @@ a:visited {
   width: 100%;
 }
 
-.contact-info a {
+.contact-info-content a {
   color: red;
   -webkit-transition: color 500ms ease;
   transition: color 500ms ease;
   text-decoration: underline;
 }
 
-.contact-info h2 {
+.about-content a {
+  color: red;
+  -webkit-transition: color 500ms ease;
+  transition: color 500ms ease;
+  text-decoration: underline;
+}
+
+.contact-info h1 {
   display: block;
+  text-align: center;
 }
 
 .contact-info p {
   font-size: 1rem;
   display: block;
+  margin-top: 2rem;
 }
 
 .field-border p {
@@ -144,6 +153,55 @@ a:visited {
   width: 100%;
 }
 
+.contact-icon-email {
+  width: 80%;
+  margin: auto;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .contact-icon-email {
+    margin: 29px auto;
+  }
+}
+
+.contact-icon-phone {
+  height: 75%;
+  margin: auto;
+}
+
+.contact-icon-discord {
+  width: 100%;
+  margin: auto;
+  color: red;
+}
+
+.skill-icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.skill-icon {
+  width: 75px;
+  height: 75px;
+  border: 2px solid red;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-shadow: inset 2px 2px 5px;
+          box-shadow: inset 2px 2px 5px;
+}
+
+.skill-img {
+  width: 85%;
+  height: 85%;
+  margin: auto;
+}
+
 .contactform-fieldset {
   margin: 0;
   padding: 0;
@@ -169,8 +227,8 @@ a:visited {
 
 .main-contact input:focus {
   outline: none;
-  -webkit-box-shadow: 0px 2px 1px green;
-          box-shadow: 0px 2px 1px green;
+  -webkit-box-shadow: 0px 2px 0px green;
+          box-shadow: 0px 2px 0px green;
 }
 
 .main-contact textarea {
@@ -212,8 +270,8 @@ a:visited {
 
 .main-contact textarea:focus {
   outline: none;
-  -webkit-box-shadow: 0px 2px 1px green;
-          box-shadow: 0px 2px 1px green;
+  -webkit-box-shadow: 0px 2px 0px green;
+          box-shadow: 0px 2px 0px green;
 }
 
 .contactform-field {
@@ -383,6 +441,10 @@ a:focus:after {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
   border-radius: 15px;
+  -webkit-transition: -webkit-transform 0.5s ease 0.5s;
+  transition: -webkit-transform 0.5s ease 0.5s;
+  transition: transform 0.5s ease 0.5s;
+  transition: transform 0.5s ease 0.5s, -webkit-transform 0.5s ease 0.5s;
 }
 
 .project-card label:hover {
@@ -392,7 +454,7 @@ a:focus:after {
   transition: color 0.5s ease;
 }
 
-.contact-info a:hover {
+.contact-info-content a:hover {
   color: black;
   -webkit-transition: color 500ms ease;
   transition: color 500ms ease;
@@ -403,6 +465,25 @@ a:focus:after {
   -webkit-transition: color 500ms ease;
   transition: color 500ms ease;
   text-decoration: underline;
+}
+
+.about-content a:hover {
+  color: black;
+  -webkit-transition: color 500ms ease;
+  transition: color 500ms ease;
+  text-decoration: underline;
+}
+
+.skill-icon img:nth-child(2) {
+  display: none;
+}
+
+.skill-icon:hover img:nth-child(2) {
+  display: block;
+}
+
+.skill-icon:hover img:nth-child(1) {
+  display: none;
 }
 
 .burger-container {
@@ -418,7 +499,7 @@ a:focus:after {
     display: none;
   }
 }
-@media (max-height: 599px) {
+@media (max-height: 799px) {
   .burger-container {
     display: block;
   }
@@ -489,7 +570,7 @@ a:focus:after {
     display: block;
   }
 }
-@media (max-height: 599px) {
+@media (max-height: 799px) {
   .header-container {
     display: none;
   }
@@ -617,7 +698,7 @@ body {
     padding: 15px 15px 15px 220px;
   }
 }
-@media (max-height: 599px) {
+@media (max-height: 799px) {
   .section {
     padding: 15px;
   }
@@ -873,7 +954,7 @@ body {
     padding: 15px 15px 15px 220px;
   }
 }
-@media (max-height: 599px) {
+@media (max-height: 799px) {
   .main-portfolio {
     padding: 15px;
   }
@@ -899,7 +980,7 @@ body {
   width: 100%;
   overflow: hidden;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .project-card-container {
     width: 50%;
   }
@@ -932,10 +1013,10 @@ body {
   padding: 15px 25px;
   -webkit-transform: translateX(-450px);
           transform: translateX(-450px);
-  -webkit-transition: height 0.5s ease, -webkit-transform 0.5s ease 0.5s;
-  transition: height 0.5s ease, -webkit-transform 0.5s ease 0.5s;
-  transition: transform 0.5s ease 0.5s, height 0.5s ease;
-  transition: transform 0.5s ease 0.5s, height 0.5s ease, -webkit-transform 0.5s ease 0.5s;
+  -webkit-transition: -webkit-transform 0.5s ease 0.5s;
+  transition: -webkit-transform 0.5s ease 0.5s;
+  transition: transform 0.5s ease 0.5s;
+  transition: transform 0.5s ease 0.5s, -webkit-transform 0.5s ease 0.5s;
   overflow: hidden;
   width: 100%;
 }
@@ -957,14 +1038,19 @@ body {
           flex-direction: column;
   -ms-flex-line-pack: normal;
       align-content: normal;
-  height: 100vh;
 }
-@media (max-height: 345px) {
+@media (max-height: 799px) {
   .aboutme {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: 100vh;
+  }
+}
+@media (min-width: 768px) {
+  .aboutme {
+    height: 100vh;
   }
 }
 
@@ -975,7 +1061,7 @@ body {
           box-shadow: 4px 4px 7px #400000;
   background: white;
   padding: 0 15px;
-  margin: auto;
+  margin: 30px auto;
   text-align: center;
   background: white;
   max-width: 300px;
@@ -989,6 +1075,7 @@ body {
   .about-container {
     width: 500px;
     max-width: none;
+    margin: auto;
   }
 }
 @media (max-height: 345px) {
@@ -1001,9 +1088,33 @@ body {
     width: 500px;
   }
 }
-@media (max-height: 599px) {
+@media (max-height: 799px) {
   .about-container {
     max-width: 80%;
+    margin: 30px auto;
+  }
+}
+
+.skill-icons2 {
+  margin-bottom: 15px;
+}
+@media (min-width: 288px) {
+  .skill-icons2 {
+    margin: auto;
+  }
+}
+
+.skill-icons3 {
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .skill-icons3 {
+    margin: auto;
+  }
+}
+@media (max-height: 480px) {
+  .skill-icons3 {
+    margin: auto;
   }
 }
 
@@ -1041,7 +1152,7 @@ body {
     width: 500px;
   }
 }
-@media (max-height: 599px) {
+@media (max-height: 799px) {
   .coding-examples-container {
     max-width: 80%;
   }
@@ -1101,7 +1212,7 @@ body {
     width: 500px;
   }
 }
-@media (max-height: 599px) {
+@media (max-height: 799px) {
   .scs-container-outer {
     max-width: 80%;
   }
@@ -1113,6 +1224,9 @@ body {
   }
 }
 
+.scs-container-outer:nth-of-type(2) {
+  text-align: center;
+}
 @media (min-width: 1200px) {
   .scs-container-outer:nth-of-type(2) {
     margin: 0 15px;
@@ -1196,7 +1310,7 @@ body {
     padding: 15px 15px 15px 220px;
   }
 }
-@media (max-height: 599px) {
+@media (max-height: 799px) {
   .main-contact {
     padding: 15px;
   }
@@ -1204,9 +1318,6 @@ body {
 
 .container-contact {
   margin-bottom: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 @media (min-width: 992px) {
   .container-contact {
@@ -1215,6 +1326,15 @@ body {
 }
 
 .contact-info-inner {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
   border: 2px solid red;
   border-radius: 15px;
   -webkit-box-shadow: 4px 4px 7px #400000;
@@ -1224,11 +1344,18 @@ body {
 }
 
 .contact-info {
-  margin: 15px 0 auto;
+  margin: 15px 0;
 }
 @media (min-width: 768px) {
   .contact-info {
     padding: 0 15px;
+  }
+}
+@media (min-width: 992px) {
+  .contact-info {
+    padding: 15px;
+    margin: 0;
+    height: 100%;
   }
 }
 
@@ -1237,7 +1364,33 @@ body {
 }
 
 .contact-info-content {
-  margin: 0 auto -0.85rem;
+  margin: 0 auto 1rem;
+}
+
+.contact-icons-container {
+  display: none;
+  margin: auto 0;
+}
+@media (min-width: 992px) {
+  .contact-icons-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.contact-icons {
+  border: 2px solid red;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  -webkit-box-shadow: inset 2px 2px 5px;
+          box-shadow: inset 2px 2px 5px;
+  overflow: hidden;
 }
 
 .contact-form {

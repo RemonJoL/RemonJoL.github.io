@@ -16,7 +16,14 @@
 
 // Medium height devices
 @mixin mh {
-   @media (max-height: #{$maxh599}) {
+   @media (max-height: #{$maxh799}) {
+       @content;
+   }
+}
+
+// Extra small devices
+@mixin xs {
+   @media (min-width: #{$min288}) {
        @content;
    }
 }
@@ -98,7 +105,7 @@
 
 @mixin inputfocus {
   outline: none;
-  box-shadow: 0px 2px 1px green;
+  box-shadow: 0px 2px 0px green;
 }
 
 @mixin inputfont {
