@@ -1,68 +1,56 @@
 @use "utility/colours";
+@use "Utility/mixins";
 
-@import "utility/breakpoints";
-@import "utility/mixins";
+// ----------------------------------------------
+// Contact Form
+// ----------------------------------------------
 
-.contactform-fieldset {
-  margin: 0;
-  padding: 0;
-  border: none;
-  display: flex;
-  flex-wrap: wrap;
-
-  @include sm {
-    width: 100%;
-  }
+.main-contact input:focus {
+  @include mixins.inputfocus;
 }
 
-.main-contact input {
-  @include inputfont;
+.contactform-field {
+  @include mixins.inputformatting;
+  @include mixins.inputfont;
   position: relative;
   display: block;
 }
 
-.main-contact input:focus {
-  @include inputfocus;
-}
-
-.main-contact textarea {
-  @include inputfont;
-  @include ie-scrollbar;
-  resize: vertical;
+.contactform-textarea {
+  @include mixins.inputfont;
+  @include mixins.ie-scrollbar;
+  resize: none;
   overflow: auto;
+  @include mixins.inputformatting;
+  padding-top: 15px;
 }
 
-.main-contact textarea::-webkit-scrollbar-track {
+// ----------------------------------------------
+// Input Custom Scrollbar
+// ----------------------------------------------
+
+.contactform-textarea::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: colours.$highlight;
   box-shadow: inset 2px 2px 1px colours.$panel-border;
 }
 
-.main-contact textarea::-webkit-scrollbar {
+.contactform-textarea::-webkit-scrollbar {
   width: 12px;
 }
 
-.main-contact textarea::-webkit-scrollbar-thumb {
+.contactform-textarea::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: colours.$darkred;
   box-shadow: inset 1px 1px 1px white;
 }
 
-.main-contact textarea::-webkit-scrollbar-thumb:active {
+.contactform-textarea::-webkit-scrollbar-thumb:active {
   background-color: red;
 }
 
-.main-contact textarea:focus {
-  @include inputfocus;
-}
-
-.contactform-field {
-  @include inputformatting;
-}
-
-.contactform-textarea {
-  @include inputformatting;
-  padding-top: 15px;
+.contactform-textarea:focus {
+  @include mixins.inputfocus;
 }
 
 // #project-descr-expand-1:checked + .project-card-content {

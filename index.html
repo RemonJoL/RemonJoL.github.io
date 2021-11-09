@@ -7,11 +7,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="description" content="Remon Jansen of Lorkeers' web developer portfolio,
+     made as part of the Netmatters Scion Coalition Scheme, to display my skills and abilities, projects and coding examples.">
+    <meta name="keywords" content="web, webdev, CSS, HTML, JavaScript, Remon Jansen of Lorkeers, Netmatters, Scion, portfolio">
+    <meta name="author" content="Remon Jansen of Lorkeers">
 
     <script src="js/jquery-3.6.0.min.js"></script>
 
     <title>Remon Jansen of Lorkeers</title>
-    <meta name="description" content="Remon Jansen of Lorkeers' Web / Software Dev Portfolio">
     <meta name="author" content="Remon Jansen of Lorkeers">
 
     <link rel="stylesheet" href="css/style.css">
@@ -19,7 +26,7 @@
   </head>
 
   <body>
-
+    <div class="overlay"></div>
     <div class="page-container">
 
       <header>
@@ -31,12 +38,41 @@
               Menu
             </span>
           </div>
+          <div class="burger-menu">
+            <div class="burger-menu-overlay">
+
+            </div>
+            <div class="burger-menu-container">
+              <a href="index.html"><div class="burger-header">
+                <span class="burger-header-letter">R</span>
+              </div></a>
+
+              <div class="burger-nav">
+                <h2><a href="aboutme.html#aboutme">About Me</a></h2>
+                <h2><a href="index.html#portfolio">My Portfolio</a></h2>
+                <h2><a href="codingexamples.html#coding-examples">Coding Examples</a></h2>
+                <h2><a href="scs-scheme.html#scs-scheme">SCS Scheme</a></h2>
+              </div>
+
+              <div class="burger-contact">
+                <h2><a href="index.html#contact">Contact Me</a></h2>
+              </div>
+
+              <div class="header-socialmedia">
+
+                <div class="socialmedia-item github-icon">
+                  <a href="https://github.com/RemonJoL" target="_blank"><img src="images/GitHub-Mark-32px.png" alt="GitHub"></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="header-container">
 
           <a href="index.html"><div class="header-initial">
-            <span class="header-letter" >R</span>
+            <span class="header-letter">R</span>
           </div></a>
 
           <div class="header-nav">
@@ -79,7 +115,7 @@
 
         <div class="header-title header-title-container" id="header-title">
           <h1>My name is Remon Jansen of Lorkeers</h1>
-          <h2 class="typewriterItem"></h2>
+          <span class="typewriterItem"></span>
         </div>
 
         <a href="#portfolio">
@@ -114,13 +150,13 @@
 
             <div class="container-project">
               <div class="project-card-container">
-                <a href="https://remon-jansen.netmatters-scs.co.uk/netmatters" target="_blank">
+                <a href="https://netmatters.remon-jansen.netmatters-scs.co.uk" target="_blank">
                   <div class="project-card">
                     <div class="project-card-content">
                       <h3>Netmatters Website Facsimile</h3>
                       <p>The first project was to create a Netmatters website facsimile using HTML, CSS and JavaScript</p>
                     </div>
-                    <img class="project-preview" src="images/NM_project_preview.jpg" alt="">
+                    <img class="project-preview" src="images/netmattersPreview.png" alt="">
                   </div>
                 </a>
               </div>
@@ -132,55 +168,31 @@
                       <h3>Axure Webshop</h3>
                       <p>The second project was to create a high-fidelity prototype for a fictional Webshop using Axure</p>
                     </div>
-                    <img class="project-preview" src="images/axure_project_preview.jpg" alt="">
+                    <img class="project-preview" src="images/axurePreview.png" alt="">
                   </div>
                 </a>
               </div>
 
               <div class="project-card-container">
-                <a href="#" target="_blank">
+                <a href="http://pairs-project.remon-jansen.netmatters-scs.co.uk/" target="_blank">
                   <div class="project-card">
                     <div class="project-card-content">
-                      <h3>Project Three</h3>
-                      <p>Project Description</p>
+                      <h3>Pairs Project</h3>
+                      <p>For the pairs project we had to co-operate with another Scion to make a website for a (fictional) company</p>
                     </div>
-                    <img class="project-preview" src="images/NM_project_preview.jpg" alt="">
+                    <img class="project-preview" src="images/pairs-projectPreview.png" alt="">
                   </div>
                 </a>
               </div>
 
               <div class="project-card-container">
-                <a href="#" target="_blank">
+                <a href="http://pic-and-post.remon-jansen.netmatters-scs.co.uk/" target="_blank">
                   <div class="project-card">
                     <div class="project-card-content">
-                      <h3>Project Four</h3>
-                      <p>Project Description</p>
+                      <h3>JavaScript Reflection</h3>
+                      <p>As part of the JavaScript reflection we had to create an app that allows users to link pictures from a photo API to email addresses</p>
                     </div>
-                    <img class="project-preview" src="images/NM_project_preview.jpg" alt="">
-                  </div>
-                </a>
-              </div>
-
-              <div class="project-card-container">
-                <a href="#" target="_blank">
-                  <div class="project-card">
-                    <div class="project-card-content">
-                      <h3>Project Five</h3>
-                      <p>Project Description</p>
-                    </div>
-                    <img class="project-preview" src="images/NM_project_preview.jpg" alt="">
-                  </div>
-                </a>
-              </div>
-
-              <div class="project-card-container">
-                <a href="#" target="_blank">
-                  <div class="project-card">
-                    <div class="project-card-content">
-                      <h3>Project Six</h3>
-                      <p>Project Description</p>
-                    </div>
-                    <img class="project-preview" src="images/NM_project_preview.jpg" alt="">
+                    <img class="project-preview" src="images/pic&postPreview.png" alt="">
                   </div>
                 </a>
               </div>
@@ -242,6 +254,7 @@
                     <div class="contact-icons-container">
 
                     <div class="contact-icons">
+                      <div class="contact-icons-shine"></div>
                       <a href="mailto:remonjol@gmail.com" title="E-mail Me"><img class="contact-icon-email" src="images/email-icon.svg" alt=""></a>
                     </div>
 
@@ -270,7 +283,9 @@
                       <div class="contact-field-outer">
                         <div class="field-border border-name">
                           <p>Name*</p>
-                          <input class="contactform-field" type="text" value="" placeholder="Name">
+                          <input id="name-field" class="contactform-field" name="nameField" type="text" value="" placeholder="Name">
+                          <div class="green-dot validation-dot"></div>
+                          <div class="red-dot validation-dot"></div>
                         </div>
                       </div>
                     </div>
@@ -279,7 +294,9 @@
                       <div class="contact-field-outer">
                         <div class="field-border border-lastname">
                           <p>Last Name*</p>
-                          <input class="contactform-field" type="text" value="" placeholder="Last Name">
+                          <input id="surname-field" class="contactform-field" name="surnameField" type="text" value="" placeholder="Last Name">
+                          <div class="green-dot validation-dot"></div>
+                          <div class="red-dot validation-dot"></div>
                         </div>
                       </div>
                     </div>
@@ -288,7 +305,9 @@
                       <div class="contact-field-outer field-single">
                         <div class="field-border border-email">
                           <p>E-mail*</p>
-                          <input class="contactform-field" type="text" value="" placeholder="E-mail">
+                          <input id="email-field" class="contactform-field" name="emailfield" type="text" value="" placeholder="E-mail">
+                          <div class="green-dot validation-dot"></div>
+                          <div class="red-dot validation-dot"></div>
                         </div>
                       </div>
                     </div>
@@ -297,21 +316,28 @@
                       <div class="contact-field-outer field-single">
                         <div class="field-border border-subject">
                           <p>Subject*</p>
-                          <input class="contactform-field" type="text" value="" placeholder="Subject">
+                          <input id="subject-field" class="contactform-field" name="subjectField" type="text" value="" placeholder="Subject">
+                          <div class="green-dot validation-dot"></div>
+                          <div class="red-dot validation-dot"></div>
                         </div>
                       </div>
                     </div>
 
                     <div class="contact-field-container">
-                      <div class="contact-field-outer-message">
+                      <div class="contact-field-outer">
                         <div class="field-border border-message">
                           <p>Your Message*</p>
-                          <textarea class="contactform-textarea" rows="10" placeholder="Your message"></textarea>
+                          <textarea id="message-field" class="contactform-textarea" name="messageField" rows="10" placeholder="Your message"></textarea>
+                          <div class="green-dot validation-dot"></div>
+                          <div class="red-dot validation-dot"></div>
                         </div>
                       </div>
                     </div>
 
                     <div class="submit-button-container">
+                      <div class="contact-confirmation-container">
+                          <p>Confirmation message</p>
+                      </div>
                       <div class="submit-button">
                         <span>Submit</span>
                       </div>
@@ -356,6 +382,8 @@
     </div>
 
     <script src="js/typewriter.js"></script>
+    <script src="js/email-validation.js"></script>
+    <script src="js/burger-menu.js"></script>
 
     <!-- Colour changer script -->
     <!-- <script>

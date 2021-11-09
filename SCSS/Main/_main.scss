@@ -1,10 +1,16 @@
 @use "utility/colours";
+@use "Utility/mixins";
 
-@import "utility/breakpoints";
-@import "utility/mixins";
+// ----------------------------------------------
+// General Page Elements
+// ----------------------------------------------
 
 *, :before, :after {
   box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
 }
 
 html {
@@ -20,50 +26,84 @@ body {
   margin: 0;
   background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(243 244 248) 30%, rgb(202 206 215) 50%, rgb(243 244 248) 70%, rgba(246 247 251) 100%);
 
-  @include sm {
+  @include mixins.sm {
     background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(246 247 251) 15%, rgb(243 244 248) 45%, rgb(202 206 215) 65%, rgb(243 244 248) 85%, rgba(246 247 251) 100%);
   }
 
-  @include md {
+  @include mixins.md {
     background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(246 247 251) 10%, rgb(243 244 248) 40%, rgb(202 206 215) 60%, rgb(243 244 248) 80%, rgba(246 247 251) 100%);
   }
 
-  @include lg {
+  @include mixins.lg {
     background: linear-gradient(90deg, rgb(246 247 251) 0%, rgb(246 247 251) 5%, rgb(243 244 248) 35%, rgb(202 206 215) 55%, rgb(243 244 248) 75%, rgba(246 247 251) 100%);
   }
-}
-
-.page-container {
-  height: 100vh;
-}
-
-.section {
-  padding: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  min-height: 100vh;
-
-  @include sm {
-    padding: 15px 15px 15px 220px;
-  }
-
-  @include mh {
-    padding: 15px;
-  }
-}
-
-.container {
-  margin: 0 -15px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px 15px;
 }
 
 .pagestyle {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
+
+.pagestyle-nobr {
+  display: flex;
+  flex-direction: column;
+}
+
+// ----------------------------------------------
+// Page Overlay
+// ----------------------------------------------
+
+.overlay {
+  display: none;
+  position: absolute;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+// ----------------------------------------------
+// Container Divs
+// ----------------------------------------------
+
+.container {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0px;
+}
+
+.page-container {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.section {
+  padding: 15px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 100vh;
+
+  @include mixins.sm {
+    padding: 15px 25px 15px 230px;
+  }
+
+  @include mixins.mh {
+    padding: 15px;
+  }
+}
+
+// ----------------------------------------------
+// Header Structure
+// ----------------------------------------------
 
 .main-header {
   background-image: url(/images/denys-nevozhai-w7YCquMkv2c-unsplash.jpg);
@@ -75,51 +115,70 @@ body {
 }
 
 .header-title-container {
-  @include overlay;
+  @include mixins.overlay;
     padding: 15px;
     width: 250px;
     margin: auto;
 
-  @include sm {
+  @include mixins.sm {
     width: 340px;
   }
 
-  @include md {
+  @include mixins.md {
     width: 470px;
   }
 
-  @include lg {
+  @include mixins.lg {
     width: auto;
   }
 
-  @include sh {
+  @include mixins.sh {
     padding: 5px 15px;
   }
 
-  @include xsh {
+  @include mixins.xsh {
     width: 300px;
   }
 }
 
-// Scroll containers for Main page
+// ----------------------------------------------
+// Scroll Container Structure
+// ----------------------------------------------
 
 .scroll {
   margin: 0 auto;
 }
 
 .scroll-container {
-  @include overlay;
+  @include mixins.overlay;
   padding: 15px 15px;
   height: 135px;
 
-  @include sm {
+  @include mixins.sm {
     height: 200px;
   }
 
-  @include sh {
+  @include mixins.sh {
     height: 135px;
   }
 }
+
+.scroll-container-bottom {
+  @include mixins.overlay;
+  padding: 15px 15px;
+  height: 125px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.scroll-up {
+  margin: 0 auto 30px;
+  padding: 15px;
+}
+
+// ----------------------------------------------
+// Scroll Container Content
+// ----------------------------------------------
 
 .arrow {
   margin: -15px auto 0;
@@ -132,12 +191,12 @@ body {
   top: 0;
   transition: height 0.3s ease-in;
 
-  @include sm {
+  @include mixins.sm {
     width: 20px;
     height: 50px;
   }
 
-  @include sh {
+  @include mixins.sh {
     width: 10px;
     height: 25px;
   }
@@ -155,30 +214,17 @@ body {
   border-top: 12px solid black;
   transition: border 0.3s ease;
 
-  @include sm {
+  @include mixins.sm {
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
     border-top: 25px solid black;
   }
 
-  @include sh {
+  @include mixins.sh {
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     border-top: 12px solid black;
   }
-}
-
-.scroll-container-bottom {
-  @include overlay;
-  padding: 15px 15px;
-  height: 125px;
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.scroll-up {
-  margin: 0 auto 30px;
-  padding: 15px;
 }
 
 .arrow-bottom {
@@ -206,7 +252,9 @@ body {
   transition: border 0.3s ease;
 }
 
-// Page rivets
+// ----------------------------------------------
+// Page Rivets
+// ----------------------------------------------
 
 .rivets {
   list-style: none;
@@ -226,7 +274,23 @@ body {
   box-shadow: 2px 2px 2px 1px black, inset 0px 1px 1px white;
 }
 
-// Typewriter cursor
+// ----------------------------------------------
+// Header Typewriter
+// ----------------------------------------------
+
+.typewriterItem {
+  position: relative;
+  display: block;
+  height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+
+  @include mixins.sm {
+    font-size: 1.25rem;
+  }
+}
+
 .typewriterItem:after {
   content:'';
   display: inline-block;
@@ -237,12 +301,6 @@ body {
   animation-iteration-count: infinite;
 	animation-timing-function:ease-in-out;
 	animation-direction: alternate;
-  height: 3px;
-  width: 16px;
-}
-
-.typewriterItem {
-  position: relative;
-  display: block;
-  height: 1.5rem;
+  height: 2px;
+  width: 0.75rem;
 }

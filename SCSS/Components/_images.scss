@@ -1,5 +1,9 @@
 @use "utility/colours";
 
+// ----------------------------------------------
+// Header Images
+// ----------------------------------------------
+
 .github-icon {
   height: 32px;
   width: 32px;
@@ -8,16 +12,16 @@
   transition: background-color 0.5s ease;
 }
 
-.scs-container-header-img {
-  width: 100%;
-}
+// ----------------------------------------------
+// Contact Section Images
+// ----------------------------------------------
 
 .contact-icon-email {
   width: 80%;
   margin: auto;
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  margin: 29px auto;
-}
+    margin: 29px auto;
+  }
 }
 
 .contact-icon-phone {
@@ -30,6 +34,18 @@
   margin: auto;
   color: red;
 }
+
+// ----------------------------------------------
+// SCS Page Images
+// ----------------------------------------------
+
+.scs-container-header-img {
+  width: 100%;
+}
+
+// ----------------------------------------------
+// About Page Images
+// ----------------------------------------------
 
 .skill-icon-container {
   display: flex;

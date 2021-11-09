@@ -1,68 +1,25 @@
 @use "Utility/colours";
+@use "Utility/mixins";
 
-@import "Utility/mixins";
-@import "Utility/breakpoints";
+// ----------------------------------------------
+// General Text Styles
+// ----------------------------------------------
 
 a {
   text-decoration: none;
   color: inherit;
 }
 
-header h2 {
-  font-size: 1.25rem;
-}
-
 a:visited {
   color: inherit;
 }
 
-.project-card h3 {
-  margin: -10px 0 0;
-  font-size: 1rem;
+// ----------------------------------------------
+// Header Text Styles
+// ----------------------------------------------
 
-  @include s {
-    margin: 0;
-    font-size: 1.17rem;
-  }
-
-  @include md {
-    margin: -15px 0 0;
-    font-size: 1rem;
-  }
-
-  @include lg {
-    margin: 0;
-    font-size: 1.17rem;
-  }
-
-}
-
-.project-card p {
-  display: inline-block;
-  margin: 0;
-  font-size: 0.85rem;
-
-  @include s {
-    font-size: 1rem;
-  }
-
-  @include md {
-    font-size: 0.85rem;
-  }
-
-  @include lg {
-    font-size: 1rem;    
-  }
-}
-
-.scroll-container h2 {
-  margin: 0 auto 1rem;
-  padding-bottom: 1rem;
-  font-size: 1rem;
-
-  @include sm {
-    font-size: 1.25rem;
-  }
+header h2 {
+  font-size: 1.25rem;
 }
 
 .header-nav a, .header-contact a {
@@ -75,11 +32,19 @@ a:visited {
 .header-title-container h1 {
   font-size: 1.5rem;
 
-  @include sm {
-    font-size: 2rem;
+  @include mixins.sm {
+    margin: 5px 5px 20px 5px;
   }
 
-  @include sh {
+  @include mixins.md {
+    font-size: 1.4rem;
+  }
+
+  @include mixins.lg {
+    font-size: 1.5rem;
+  }
+
+  @include mixins.sh {
     font-size: 1.5rem;
     margin-top: 0;
   }
@@ -88,28 +53,83 @@ a:visited {
 .header-title-container h2 {
   font-size: 1rem;
 
-  @include sm {
+  @include mixins.sm {
     font-size: 1.5rem;
   }
 
-  @include sh {
+  @include mixins.sh {
     font-size: 1rem;
     margin-bottom: 0rem;
   }
 }
 
-.header-initial span {
-  background-color: rgba(255, 255, 255, 1);
-  width: 100%;
+// ----------------------------------------------
+// Scroll Button Text Styles
+// ----------------------------------------------
+
+.scroll-container h2 {
+  margin: 0 auto 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+
+  @include mixins.sm {
+    font-size: 1.25rem;
+  }
 }
 
-.contact-info-content a {
-  color: red;
-  transition: color 500ms ease;
-  text-decoration: underline;
+.scroll-container-bottom h2 {
+  margin-bottom: 0;
+  font-size: 1rem;
 }
 
-.about-content a {
+// ----------------------------------------------
+// Project Section Text Styles
+// ----------------------------------------------
+
+.project-card h3 {
+  margin: -10px 0 0;
+  font-size: 1rem;
+
+  @include mixins.s {
+    margin: 0;
+    font-size: 1.17rem;
+  }
+
+  @include mixins.md {
+    margin: -15px 0 0;
+    font-size: 1rem;
+  }
+
+  @include mixins.lg {
+    margin: 0;
+    font-size: 1.17rem;
+  }
+
+}
+
+.project-card p {
+  display: inline-block;
+  margin: 0;
+  font-size: 0.85rem;
+
+  @include mixins.s {
+    font-size: 1rem;
+  }
+
+  @include mixins.md {
+    font-size: 0.85rem;
+  }
+
+  @include mixins.lg {
+    font-size: 1rem;
+  }
+}
+
+// ----------------------------------------------
+// Contact Section Text Styles
+// ----------------------------------------------
+
+.contact-info-content a, .about-content a {
   color: red;
   transition: color 500ms ease;
   text-decoration: underline;
@@ -138,28 +158,26 @@ a:visited {
   margin: 0;
   display: table;
   line-height: 1.25rem;
+  box-shadow: 3px 3px 5px rgb(0 0 0 / 90%);
+  border-radius: 10px;
+  border: 2px solid red;
+  padding: 0 5px;
 }
 
-.scroll-container-bottom h2 {
-  margin-bottom: 0;
-  font-size: 1rem;
-}
+// ----------------------------------------------
+// SCS Page Text Styles
+// ----------------------------------------------
 
 .scs-container-content ul {
   list-style: inside;
   padding: 0;
 }
 
-.scs-scheme li {
+.scs-scheme li, .scs-scheme h3 {
   line-height: 1.5rem;
 }
 
 .scs-scheme h2 {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.scs-scheme h3 {
   text-align: center;
   margin: 0 auto;
 }

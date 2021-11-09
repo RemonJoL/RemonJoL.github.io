@@ -1,69 +1,72 @@
 @use "utility/colours";
+@use "Utility/mixins";
 
-@import "utility/breakpoints";
-@import "utility/mixins";
+// ----------------------------------------------
+// About Page Structure
+// ----------------------------------------------
 
 .aboutme {
   display: flex;
   flex-direction: column;
   align-content: normal;
+  justify-content: space-between;
 
-  @include mh {
+  @include mixins.mh {
     flex-direction: row;
     height: 100vh;
   }
 
-  @include md {
+  @include mixins.md {
   height: 100vh;
 
   }
 }
 
 .about-container {
-  @include redborder;
+  @include mixins.redborder;
   padding: 0 15px;
-  margin: 30px auto;
+  margin: 30px 0;
   text-align: center;
   background: white;
-  max-width: 300px;
+  width: 100%;
 
-  @include s {
-    width: 325px;
-  }
-
-  @include md {
+  @include mixins.md {
     width: 500px;
     max-width: none;
     margin: auto;
   }
 
-  @include xsh {
+  @include mixins.xsh {
     margin: 30px auto;
   }
 
-  @include sh{
+  @include mixins.sh{
     width: 500px;
   }
 
-  @include mh {
+  @include mixins.mh {
     max-width: 80%;
     margin: 30px auto;
   }
 }
 
+// ----------------------------------------------
+// Skill Icons
+// ----------------------------------------------
+
 .skill-icons2 {
   margin-bottom: 15px;
- @include xs {
-   margin: auto;
+  @include mixins.sm {
+    margin-bottom: 0;
   }
 }
 
 .skill-icons3 {
   margin-bottom: 15px;
-  @include md {
+  @include mixins.md {
     margin: auto;
   }
-  @include sh {
+  @include mixins.sh {
     margin: auto;
   }
 }
