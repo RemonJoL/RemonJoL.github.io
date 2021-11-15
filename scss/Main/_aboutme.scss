@@ -15,11 +15,6 @@
     flex-direction: row;
     height: 100vh;
   }
-
-  @include mixins.md {
-  // height: 100vh;
-
-  }
 }
 
 .about-container {
@@ -52,7 +47,6 @@
   }
 
   @include mixins.mh {
-    max-width: 80%;
     margin: 30px auto;
   }
 }

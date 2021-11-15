@@ -15,19 +15,8 @@
   position: relative;
   width: 100%;
 
-  @include md {
-  }
-
-  @include xl {
-    // width: 35%;
-  }
-
   @include sh{
     width: 500px;
-  }
-
-  @include mh {
-    max-width: 80%;
   }
 }
 
