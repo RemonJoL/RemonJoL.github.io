@@ -159,8 +159,10 @@ header h2 {
 
 .coding-example-centered-text {
   text-align: center;
-  width: 100%;
   margin-bottom: 10px;
+  line-height: 1rem;
+  font-size: 1rem;
+  display: block;
 }
 
 .scs-container-content ul {
@@ -1382,6 +1384,7 @@ body {
   font-family: monospace;
   border-spacing: 0px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .sql-table th {

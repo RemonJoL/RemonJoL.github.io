@@ -170,8 +170,10 @@ header h2 {
 
 .coding-example-centered-text {
   text-align: center;
-  width: 100%;
   margin-bottom: 10px;
+  line-height: 1rem;
+  font-size: 1rem;
+  display: block;
 }
 
 // ----------------------------------------------
