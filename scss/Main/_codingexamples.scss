@@ -7,6 +7,7 @@
 
 .coding-examples {
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .coding-examples-container {
@@ -35,6 +36,10 @@
   @include mixins.md {
   margin: 15px;
   }
+}
+
+.coding-example-content {
+  display: block;
 }
 
 .coding-example:before {

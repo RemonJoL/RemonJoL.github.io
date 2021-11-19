@@ -1237,6 +1237,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .coding-examples-container {
@@ -1265,6 +1268,10 @@ body {
   .coding-example {
     margin: 15px;
   }
+}
+
+.coding-example-content {
+  display: block;
 }
 
 .coding-example:before {
