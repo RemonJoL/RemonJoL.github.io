@@ -157,6 +157,12 @@ header h2 {
   padding: 0 5px;
 }
 
+.coding-example-centered-text {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .scs-container-content ul {
   list-style: inside;
   padding: 0;
@@ -214,6 +220,10 @@ header h2 {
   width: 85%;
   height: 85%;
   margin: auto;
+}
+
+.coding-example-img {
+  width: 100%;
 }
 
 .main-contact input:focus {
@@ -1270,7 +1280,7 @@ body {
   margin: 15px;
 }
 
-.coding-example-code {
+.coding-example-code, .coding-example-image, .coding-example-table {
   scrollbar-base-color: white;
   scrollbar-face-color: red;
   scrollbar-3dlight-color: white;
@@ -1282,34 +1292,48 @@ body {
   border: 2px solid red;
   border-radius: 15px;
   width: 100%;
-  height: 300px;
   overflow: auto;
   background: #f3f4f8;
   padding: 15px;
   text-align: left;
   -webkit-box-shadow: inset 1px 1px 10px;
           box-shadow: inset 1px 1px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.coding-example-code::-webkit-scrollbar-track {
+.coding-example-code {
+  height: 300px;
+}
+
+.coding-example-table {
+  height: 200px;
+}
+
+.coding-example-code::-webkit-scrollbar-track, .coding-example-table::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: #eee;
   -webkit-box-shadow: inset 2px 2px 1px #ccc;
           box-shadow: inset 2px 2px 1px #ccc;
 }
 
-.coding-example-code::-webkit-scrollbar {
+.coding-example-code::-webkit-scrollbar, .coding-example-table::-webkit-scrollbar {
   width: 12px;
 }
 
-.coding-example-code::-webkit-scrollbar-thumb {
+.coding-example-code::-webkit-scrollbar-thumb, .coding-example-table::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #bd0000;
   -webkit-box-shadow: inset 1px 1px 1px white;
           box-shadow: inset 1px 1px 1px white;
 }
 
-.coding-example-code::-webkit-scrollbar-thumb:active {
+.coding-example-code::-webkit-scrollbar-thumb:active, .coding-example-table::-webkit-scrollbar-thumb:active {
   background-color: red;
 }
 
@@ -1317,9 +1341,70 @@ body {
   text-align: center;
 }
 
+@media (any-hover: none) {
+  .coding-example-comment {
+    color: white;
+    background: red;
+  }
+}
+
 .coding-example-comment:hover {
   color: white;
   background: red;
+}
+
+.double-table-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .double-table-container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.table-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.sql-table {
+  font-family: monospace;
+  border-spacing: 0px;
+  margin-bottom: 10px;
+}
+
+.sql-table th {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.sql-table td {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.sql-table tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sql-table tr:nth-of-type(even) {
+  background-color: rgba(255, 0, 0, 0.25);
 }
 
 .scs-scheme {

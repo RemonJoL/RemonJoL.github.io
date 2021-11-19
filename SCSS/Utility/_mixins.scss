@@ -159,3 +159,14 @@
   scrollbar-shadow-color: white;
   scrollbar-dark-shadow-color: white;
 }
+
+// ----------------------------------------------
+// SQL Table Styling
+// ----------------------------------------------
+
+@mixin sql-table {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}

@@ -1,24 +1,30 @@
 @use "utility/colours";
+@use "Utility/mixins";
 
-@import "utility/breakpoints";
-@import "utility/mixins";
+// ----------------------------------------------
+// Coding Examples Page Structure
+// ----------------------------------------------
 
 .coding-examples {
   flex-direction: column;
 }
 
 .coding-examples-container {
-  @include redborder;
+  @include mixins.redborder;
   max-width: 700px;
   padding: 15px 15px;
   margin: 30px 0;
   position: relative;
   width: 100%;
 
-  @include sh{
+  @include mixins.sh{
     width: 500px;
   }
 }
+
+// ----------------------------------------------
+// Coding Examples Card
+// ----------------------------------------------
 
 .coding-examples-title {
   text-align: center;
@@ -26,7 +32,7 @@
 
 .coding-example {
 
-  @include md {
+  @include mixins.md {
   margin: 15px;
   }
 }
@@ -47,43 +53,110 @@
 
 }
 
-.coding-example-code {
-  @include ie-scrollbar;
-  @include inputstyle;
-  height: 300px;
+.coding-example-code, .coding-example-image, .coding-example-table {
+  @include mixins.ie-scrollbar;
+  @include mixins.inputstyle;
   overflow: auto;
   background: #f3f4f8;
   padding: 15px;
   text-align: left;
   box-shadow: inset 1px 1px 10px;
-
+  display: flex;
+  flex-direction: column;
 }
 
-.coding-example-code::-webkit-scrollbar-track {
+
+.coding-example-code {
+  height: 300px;
+}
+
+.coding-example-table {
+  height: 200px;
+}
+
+
+// ----------------------------------------------
+// Coding Examples Scrollbar
+// ----------------------------------------------
+
+.coding-example-code::-webkit-scrollbar-track, .coding-example-table::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: colours.$highlight;
   box-shadow: inset 2px 2px 1px colours.$panel-border;
 }
 
-.coding-example-code::-webkit-scrollbar {
+.coding-example-code::-webkit-scrollbar, .coding-example-table::-webkit-scrollbar {
   width: 12px;
 }
 
-.coding-example-code::-webkit-scrollbar-thumb {
+.coding-example-code::-webkit-scrollbar-thumb, .coding-example-table::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: colours.$darkred;
   box-shadow: inset 1px 1px 1px white;
 }
 
-.coding-example-code::-webkit-scrollbar-thumb:active {
+.coding-example-code::-webkit-scrollbar-thumb:active, .coding-example-table::-webkit-scrollbar-thumb:active {
   background-color: red;
 }
+
+// ----------------------------------------------
+// Coding Examples Text
+// ----------------------------------------------
 
 .coding-example-description-title {
   text-align: center;
 }
 
+.coding-example-comment {
+  @media (any-hover: none) {
+    color: white;
+    background: red;
+  }
+
+}
+
 .coding-example-comment:hover {
   color: white;
   background: red;
+}
+
+// ----------------------------------------------
+// Coding Examples SQL Tables
+// ----------------------------------------------
+
+.double-table-container {
+  display: flex;
+  flex-wrap: wrap;
+  @include mixins.md {
+    flex-wrap: nowrap;
+  }
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.sql-table {
+  font-family: monospace;
+  border-spacing: 0px;
+  margin-bottom: 10px;
+}
+
+.sql-table th {
+  @include mixins.sql-table;
+  font-weight: bold;
+}
+
+.sql-table td {
+  @include mixins.sql-table;
+}
+
+.sql-table tr:nth-of-type(odd) {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.sql-table tr:nth-of-type(even) {
+  background-color: rgb(255 0 0 / 25%);
 }
