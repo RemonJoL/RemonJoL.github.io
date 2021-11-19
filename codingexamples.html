@@ -1144,38 +1144,38 @@ typeWriter();
                   </div>
                   <p>The Ratings table contains data on ratings and reviews, it connects to the Master table through mov_id. The query places it at the very end of the results table.</p>
                   <div class="coding-example-code">
-                    <pre><code>
-                <span class="coding-example-comment">&lt;!-- Selects the following:
-                  movie title and year from the Master table,
-                  director first and last name, from the Director Details obtained through the Directors table and concatenated to display as a single value,
-                  genre title from the Genre Details table, obtained through the Genre table, and
-                  rating from the Movie Ratings table--></span>
+    <pre><code>
+<span class="coding-example-comment">&lt;!-- Selects the following:
+  movie title and year from the Master table,
+  director first and last name, from the Director Details obtained through the Directors table and concatenated to display as a single value,
+  genre title from the Genre Details table, obtained through the Genre table, and
+  rating from the Movie Ratings table--></span>
 
-                  SELECT mov_title AS "Movie", mov_year AS "Year",
-                    CONCAT(director.dir_fname, director.dir_lname) AS "Director",
-                    genres.gen_title AS "Genre",
-                    rating.rev_stars AS "Stars (Rating)"
-                  FROM movie
+  SELECT mov_title AS "Movie", mov_year AS "Year",
+    CONCAT(director.dir_fname, director.dir_lname) AS "Director",
+    genres.gen_title AS "Genre",
+    rating.rev_stars AS "Stars (Rating)"
+  FROM movie
 
-                <span class="coding-example-comment">&lt;!-- Joins the tables in the following configuration:
-                  director - movie_direction - movie - movie_genres - genres - rating --></span>
+<span class="coding-example-comment">&lt;!-- Joins the tables in the following configuration:
+  director - movie_direction - movie - movie_genres - genres - rating --></span>
 
-                  LEFT OUTER movie_direction ON movie_direction.mov_id = movie.mov_id
-                  LEFT OUTER director ON director.dir_id = movie_direction.dir_id
-                  LEFT OUTER movie_genres ON movie_genres.mov_id = movie.mov_id
-                  LEFT OUTER genres ON genres.gen_id = movie_genres.gen_id
-                  LEFT OUTER rating ON rating.mov_id = movie.mov_id
+  LEFT OUTER movie_direction ON movie_direction.mov_id = movie.mov_id
+  LEFT OUTER director ON director.dir_id = movie_direction.dir_id
+  LEFT OUTER movie_genres ON movie_genres.mov_id = movie.mov_id
+  LEFT OUTER genres ON genres.gen_id = movie_genres.gen_id
+  LEFT OUTER rating ON rating.mov_id = movie.mov_id
 
-                <span class="coding-example-comment">&lt;!-- Filters the results to only display results where the movie's language is English,
-                  a subquery that filters for the movie's year of release being before 1990 --></span>
+<span class="coding-example-comment">&lt;!-- Filters the results to only display results where the movie's language is English,
+  a subquery that filters for the movie's year of release being before 1990 --></span>
 
-                  WHERE movie.mov_lang = 'English'
-                    AND movie.mov_year IN (SELECT mov_year FROM movie WHERE mov_year < 1990)
+  WHERE movie.mov_lang = 'English'
+    AND movie.mov_year IN (SELECT mov_year FROM movie WHERE mov_year < 1990)
 
-                <span class="coding-example-comment">&lt;!-- Orders the results by movie title in an ascending order --></span>
+<span class="coding-example-comment">&lt;!-- Orders the results by movie title in an ascending order --></span>
 
-                  ORDER BY movie.mov_title ASC;
-                    </code></pre>
+  ORDER BY movie.mov_title ASC;
+    </code></pre>
                   </div>
                   <p>This SQL query joins the Director tables, Master table, Genre tables and Rating tables together. It then displays all movies where the language is English, were released before 1990 and are alphabetically ordered by title.</p>
                   <p>The results are displayed below:</p>
