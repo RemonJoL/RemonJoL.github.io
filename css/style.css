@@ -228,6 +228,16 @@ header h2 {
   width: 100%;
 }
 
+.coding-example-arrow {
+  position: relative;
+  top: 2px;
+}
+
+.arrow-up {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .main-contact input:focus {
   outline: none;
 }
@@ -1249,7 +1259,7 @@ body {
           box-shadow: 4px 4px 7px #400000;
   background: white;
   max-width: 700px;
-  padding: 15px 15px;
+  padding: 15px 15px 50px;
   margin: 30px 0;
   position: relative;
   width: 100%;
@@ -1270,7 +1280,41 @@ body {
   }
 }
 
+.coding-example-expand-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.coding-example-expand-button {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 7px 15px;
+  border: 2px solid red;
+  border-radius: 15px;
+  -webkit-box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.9);
+          box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.9);
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.coding-example-expand-button:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .coding-example-content {
+  display: none;
+  margin-top: 20px;
+}
+
+.coding-example-visible {
   display: block;
 }
 
@@ -1287,6 +1331,7 @@ body {
 .coding-example-title {
   text-align: center;
   margin: 15px;
+  cursor: pointer;
 }
 
 .coding-example-code, .coding-example-image, .coding-example-table {

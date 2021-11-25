@@ -60,3 +60,12 @@
 .coding-example-img {
   width: 100%;
 }
+
+.coding-example-arrow {
+  position: relative;
+  top: 2px;
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+}

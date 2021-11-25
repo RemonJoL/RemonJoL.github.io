@@ -13,7 +13,7 @@
 .coding-examples-container {
   @include mixins.redborder;
   max-width: 700px;
-  padding: 15px 15px;
+  padding: 15px 15px 50px;
   margin: 30px 0;
   position: relative;
   width: 100%;
@@ -38,7 +38,34 @@
   }
 }
 
+.coding-example-expand-container{
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.coding-example-expand-button{
+  margin: 0 auto;
+  display: flex;
+  padding: 7px 15px;
+  border: 2px solid red;
+  border-radius: 15px;
+  box-shadow: inset 3px 3px 5px rgb(0 0 0 / 90%);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.coding-example-expand-button:hover{
+  background-color: rgba(255, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+
 .coding-example-content {
+  display: none;
+  margin-top: 20px;
+}
+
+.coding-example-visible {
   display: block;
 }
 
@@ -55,7 +82,7 @@
 .coding-example-title {
   text-align: center;
   margin: 15px;
-
+  cursor: pointer;
 }
 
 .coding-example-code, .coding-example-image, .coding-example-table {
@@ -117,7 +144,6 @@
     color: white;
     background: red;
   }
-
 }
 
 .coding-example-comment:hover {
