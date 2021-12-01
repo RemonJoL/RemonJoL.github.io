@@ -129,6 +129,7 @@ let greenDotCounter;
 
 // Adds click functionality to submit button
 submitBtn.addEventListener("click", function(){
+  event.preventDefault();
   // Resets green dot counter to 0
   greenDotCounter = 0;
   // Loops through green dots and checks how many are displayed
