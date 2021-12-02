@@ -129,7 +129,6 @@ let greenDotCounter;
 
 // Adds click functionality to submit button
 submitBtn.addEventListener("click", function(){
-  // event.preventDefault();
   // Resets green dot counter to 0
   greenDotCounter = 0;
   // Loops through green dots and checks how many are displayed
@@ -146,6 +145,7 @@ submitBtn.addEventListener("click", function(){
     setTimeout(function(){
       confirmation.style.display = "none";
     }, 2000);
+    event.preventDefault();
   }
   else {
     // Displays popup message saying valid information has to be entered, then hides popup
@@ -154,5 +154,6 @@ submitBtn.addEventListener("click", function(){
     setTimeout(function(){
       confirmation.style.display = "none";
     }, 2000);
+    event.preventDefault();
   }
 });

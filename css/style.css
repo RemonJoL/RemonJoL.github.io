@@ -33,7 +33,12 @@ header h2 {
 }
 @media (min-width: 992px) {
   .header-title-container h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header-title-container h1 {
+    font-size: 2.25rem;
   }
 }
 @media (max-height: 480px) {
@@ -157,6 +162,10 @@ header h2 {
   padding: 0 5px;
 }
 
+.aboutme h2 {
+  text-align: center;
+}
+
 .coding-example-centered-text {
   text-align: center;
   margin-bottom: 10px;
@@ -179,7 +188,13 @@ header h2 {
   margin: 0 auto;
 }
 
+.scs-scheme h3 {
+  text-align: center;
+}
+
 .scs-container-content a {
+  display: block;
+  text-align: center;
   color: red;
   text-decoration: underline;
 }
@@ -997,6 +1012,16 @@ body {
     font-size: 1.25rem;
   }
 }
+@media (min-width: 992px) {
+  .typewriterItem {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .typewriterItem {
+    font-size: 1.7rem;
+  }
+}
 
 .typewriterItem:after {
   content: "";
@@ -1050,7 +1075,28 @@ body {
 }
 @media (min-width: 768px) {
   .container-project {
-    padding: 30px 15px;
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container-project {
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+}
+@media (min-width: 1440px) {
+  .container-project {
+    width: 1200px;
+  }
+}
+@media (max-height: 345px) {
+  .container-project {
+    margin: 30px 15px;
+  }
+}
+@media (max-height: 767px) {
+  .container-project {
+    margin: 30px auto;
   }
 }
 
@@ -1142,7 +1188,6 @@ body {
   background: white;
   padding: 0 15px;
   margin: 30px 0;
-  text-align: center;
   background: white;
   width: 100%;
 }
@@ -1312,6 +1357,10 @@ body {
 .coding-example-content {
   display: none;
   margin-top: 20px;
+}
+
+.coding-example-description {
+  padding: 0px 0px 15px;
 }
 
 .coding-example-visible {
@@ -1518,9 +1567,6 @@ body {
   }
 }
 
-.scs-container-outer:nth-of-type(2) {
-  text-align: center;
-}
 @media (min-width: 1200px) {
   .scs-container-outer:nth-of-type(2) {
     margin: 0 15px;
@@ -1596,8 +1642,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media (min-width: 576px) {
   .main-contact {
@@ -1607,6 +1655,37 @@ body {
 @media (max-height: 767px) {
   .main-contact {
     padding: 15px;
+  }
+}
+
+.container-contact-outer {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px 0px;
+}
+@media (min-width: 1440px) {
+  .container-contact-outer {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media (max-height: 345px) {
+  .container-contact-outer {
+    margin: 30px auto;
+  }
+}
+@media (max-height: 767px) {
+  .container-contact-outer {
+    margin: 30px 15px;
+  }
+}
+@media (max-height: 345px) {
+  .container-contact-outer {
+    margin: 30px auto;
   }
 }
 
@@ -1651,6 +1730,16 @@ body {
     padding: 15px;
     margin: 0;
     height: 100%;
+  }
+}
+@media (max-height: 480px) {
+  .contact-info {
+    padding: 0px;
+  }
+}
+@media (max-height: 345px) {
+  .contact-info {
+    padding: 15px;
   }
 }
 
@@ -1739,13 +1828,19 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   margin: auto;
   -webkit-box-shadow: inset 2px 2px 5px;
           box-shadow: inset 2px 2px 5px;
   overflow: hidden;
   position: relative;
+}
+@media (min-width: 1200px) {
+  .contact-icons {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .contact-form {
@@ -1761,6 +1856,33 @@ body {
   }
 }
 @media (min-width: 768px) {
+  .contact-form {
+    padding: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .contact-form {
+    padding: 15px;
+    margin: 0;
+    height: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-form {
+    padding: 15px;
+  }
+}
+@media (min-width: 1440px) {
+  .contact-form {
+    padding: 15px 30px 15px 15px;
+  }
+}
+@media (max-height: 480px) {
+  .contact-form {
+    padding: 0px;
+  }
+}
+@media (max-height: 345px) {
   .contact-form {
     padding: 15px;
   }

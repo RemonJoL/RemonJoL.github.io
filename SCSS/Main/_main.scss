@@ -289,6 +289,14 @@ body {
   @include mixins.sm {
     font-size: 1.25rem;
   }
+
+  @include mixins.lg {
+    font-size: 1.5rem;
+  }
+
+  @include mixins.xl {
+    font-size: 1.7rem;
+  }
 }
 
 .typewriterItem:after {

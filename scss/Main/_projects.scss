@@ -27,7 +27,28 @@
   padding: 30px 0;
 
   @include mixins.md {
-    padding: 30px 15px;
+    margin: 0;
+  }
+
+  @include mixins.xl {
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  @include mixins.xxl {
+    width: 1200px;
+  }
+
+  @include mixins.xsh {
+    margin: 30px 15px;
+  }
+
+  // @include mixins.sh{
+  //   width: 500px;
+  // }
+
+  @include mixins.mh {
+    margin: 30px auto;
   }
 }
 
