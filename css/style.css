@@ -1947,6 +1947,34 @@ body {
   }
 }
 
+.validation-error {
+  border: 2px solid red;
+  border-radius: 15px;
+  -webkit-box-shadow: 4px 4px 7px #400000;
+          box-shadow: 4px 4px 7px #400000;
+  background: white;
+  padding: 15px;
+  width: 170px;
+  position: absolute;
+  z-index: 1;
+}
+
+.error-firstname {
+  top: -90px;
+  right: -100px;
+}
+
+.error-lastname {
+  top: -90px;
+  right: 30px;
+}
+
+.error-email {
+  top: -50px;
+  right: 20px;
+  width: 190px;
+}
+
 .submit-button-container {
   border: 2px solid red;
   border-radius: 15px;
